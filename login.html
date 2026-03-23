@@ -89,9 +89,9 @@
 <!-- Header / Nav (Following TopNavBar logic but suppressed main links for focus) -->
 <header class="fixed top-0 w-full z-50 glass-header">
 <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-<div class="text-2xl font-black tracking-tighter text-red-700 font-headline uppercase">
+<a href="index.html" class="hover:opacity-80 transition-opacity"><div class="text-2xl font-black tracking-tighter text-red-700 font-headline uppercase">
                 PATHFINDER
-            </div>
+            </div></a>
 <div class="flex items-center gap-4">
 <button class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-surface-container-low transition-all text-sm font-label font-bold uppercase tracking-tight text-zinc-600">
 <span class="material-symbols-outlined text-lg" data-icon="language">language</span>
@@ -154,7 +154,7 @@
 <div class="mt-10 pt-8 border-t border-surface-container text-center">
 <p class="text-zinc-500 text-sm font-label">
                         Não tens conta? 
-                        <a class="text-primary font-bold hover:underline underline-offset-4 ml-1" href="#">Registar</a>
+                        <a class="text-primary font-bold hover:underline underline-offset-4 ml-1" href="login.html">Registar</a>
 </p>
 </div>
 </div>
@@ -171,4 +171,51 @@
 <img alt="" class="w-full h-auto grayscale contrast-125 mix-blend-multiply" data-alt="dramatic low angle shot of a trail runner's shoes hitting a rocky mountain path with dust particles in sunset light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVP1jqDk_ONAN81ov1tCSmav8KMRB-YSp6kunfd-zzI_lOZ71A6MZ-AyKQF-E8ZQfP8DHv5-ton3lavElO66IcwvJYbQQy6q03eZEWuj99c090niWbb2kto-2Gm14b-FZzXcA0FWh9n6mwhHV3JBv-UT5OTD4KBOs7RxFYD6Hmu2ZFiZIFmnJZ5Vx62QhfYYEA61M9mT0pWVXvAk-Cb0Y1GpAeLeh0Uwg1MPodpRaitAHUnFOrGEp0LYg0FAAQuBmQLJCIvQOO_tk1"/>
 </div>
 <!-- Footer Script Logic: The navigation shell is suppressed here due to the transactional nature of the login page -->
+<!-- Added Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[100] bg-white dark:bg-zinc-950 p-8 flex flex-col gap-8 transition-all duration-300">
+    <div class="flex justify-between items-center border-b border-zinc-200 pb-4">
+        <span class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 uppercase">MENU</span>
+        <button id="close-menu-btn" class="material-symbols-outlined text-4xl hover:text-red-700 transition-colors">close</button>
+    </div>
+    <nav class="flex flex-col gap-6 text-2xl font-bold uppercase tracking-tight">
+        <a href="index.html" class="hover:text-red-700 transition-colors">Home</a>
+        <a href="eventos.html" class="hover:text-red-700 transition-colors">Eventos</a>
+        <a href="galeria.html" class="hover:text-red-700 transition-colors">Galeria</a>
+        <a href="sobre-equipa.html" class="hover:text-red-700 transition-colors">Sobre Nós</a>
+        <a href="comunidade.html" class="hover:text-red-700 transition-colors">Comunidade</a>
+        <a href="loja-oficial.html" class="hover:text-red-700 transition-colors">Loja</a>
+        <a href="contactos.html" class="hover:text-red-700 transition-colors">Contacto</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-zinc-200">
+        <a href="perfil-atleta.html" class="flex items-center gap-4 bg-red-700 text-white p-4 rounded-xl font-bold justify-center hover:bg-black transition-all">
+            <span class="material-symbols-outlined">person</span>
+            MEU PAINEL
+        </a>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const close = document.getElementById('close-menu-btn');
+        
+        btn?.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        close?.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Ensure nav links are closed when clicked (for single-page feel even though they are multi-page)
+        document.querySelectorAll('#mobile-menu-overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    });
+</script>
 </body></html>

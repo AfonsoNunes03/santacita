@@ -82,7 +82,7 @@
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-white/60 dark:bg-zinc-950/60 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
 <nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-<div class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 font-headline">PATHFINDER</div>
+<a href="index.html" class="hover:opacity-80 transition-opacity"><div class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 font-headline">PATHFINDER</div></a>
 <div class="hidden md:flex items-center gap-8">
 <a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="index.html">Home</a>
 <a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="eventos.html">Eventos</a>
@@ -151,7 +151,7 @@
 <div class="relative z-10 flex flex-col h-full justify-between">
 <div>
 <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Próximo Desafio</span>
-<h2 class="font-headline text-3xl font-bold mb-1">Trilhos dos Templários</h2>
+<a href="index.html" class="hover:opacity-80 transition-opacity"><h2 class="font-headline text-3xl font-bold mb-1">Trilhos dos Templários</h2></a>
 <p class="text-zinc-500 font-medium">Tomar, Portugal • 42km Trail Marathon</p>
 </div>
 <div class="mt-8 flex gap-4 md:gap-8">
@@ -296,7 +296,7 @@
 <footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 mt-20">
 <div class="py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
 <div class="mb-8 md:mb-0">
-<span class="text-red-700 font-bold font-headline tracking-tighter text-xl">PATHFINDER</span>
+<a href="index.html" class="hover:opacity-80 transition-opacity"><span class="text-red-700 font-bold font-headline tracking-tighter text-xl">PATHFINDER</span></a>
 <p class="font-['Manrope'] text-xs uppercase tracking-widest text-zinc-400 mt-2">© 2024 Digital Pathfinder Trail Club.</p>
 </div>
 <div class="flex gap-8">
@@ -325,4 +325,51 @@
 <span class="text-[10px] font-bold uppercase tracking-tighter">Perfil</span>
 </a>
 </nav>
+<!-- Added Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[100] bg-white dark:bg-zinc-950 p-8 flex flex-col gap-8 transition-all duration-300">
+    <div class="flex justify-between items-center border-b border-zinc-200 pb-4">
+        <span class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 uppercase">MENU</span>
+        <button id="close-menu-btn" class="material-symbols-outlined text-4xl hover:text-red-700 transition-colors">close</button>
+    </div>
+    <nav class="flex flex-col gap-6 text-2xl font-bold uppercase tracking-tight">
+        <a href="index.html" class="hover:text-red-700 transition-colors">Home</a>
+        <a href="eventos.html" class="hover:text-red-700 transition-colors">Eventos</a>
+        <a href="galeria.html" class="hover:text-red-700 transition-colors">Galeria</a>
+        <a href="sobre-equipa.html" class="hover:text-red-700 transition-colors">Sobre Nós</a>
+        <a href="comunidade.html" class="hover:text-red-700 transition-colors">Comunidade</a>
+        <a href="loja-oficial.html" class="hover:text-red-700 transition-colors">Loja</a>
+        <a href="contactos.html" class="hover:text-red-700 transition-colors">Contacto</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-zinc-200">
+        <a href="perfil-atleta.html" class="flex items-center gap-4 bg-red-700 text-white p-4 rounded-xl font-bold justify-center hover:bg-black transition-all">
+            <span class="material-symbols-outlined">person</span>
+            MEU PAINEL
+        </a>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const close = document.getElementById('close-menu-btn');
+        
+        btn?.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        close?.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Ensure nav links are closed when clicked (for single-page feel even though they are multi-page)
+        document.querySelectorAll('#mobile-menu-overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    });
+</script>
 </body></html>

@@ -327,8 +327,55 @@
 <a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Privacy Policy</a>
 <a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Terms of Service</a>
 <a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Shipping</a>
-<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Contact</a>
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="contactos.html">Contact</a>
 </div>
 </footer>
 </main>
+<!-- Added Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[100] bg-white dark:bg-zinc-950 p-8 flex flex-col gap-8 transition-all duration-300">
+    <div class="flex justify-between items-center border-b border-zinc-200 pb-4">
+        <span class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 uppercase">MENU</span>
+        <button id="close-menu-btn" class="material-symbols-outlined text-4xl hover:text-red-700 transition-colors">close</button>
+    </div>
+    <nav class="flex flex-col gap-6 text-2xl font-bold uppercase tracking-tight">
+        <a href="index.html" class="hover:text-red-700 transition-colors">Home</a>
+        <a href="eventos.html" class="hover:text-red-700 transition-colors">Eventos</a>
+        <a href="galeria.html" class="hover:text-red-700 transition-colors">Galeria</a>
+        <a href="sobre-equipa.html" class="hover:text-red-700 transition-colors">Sobre Nós</a>
+        <a href="comunidade.html" class="hover:text-red-700 transition-colors">Comunidade</a>
+        <a href="loja-oficial.html" class="hover:text-red-700 transition-colors">Loja</a>
+        <a href="contactos.html" class="hover:text-red-700 transition-colors">Contacto</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-zinc-200">
+        <a href="perfil-atleta.html" class="flex items-center gap-4 bg-red-700 text-white p-4 rounded-xl font-bold justify-center hover:bg-black transition-all">
+            <span class="material-symbols-outlined">person</span>
+            MEU PAINEL
+        </a>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const close = document.getElementById('close-menu-btn');
+        
+        btn?.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        close?.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Ensure nav links are closed when clicked (for single-page feel even though they are multi-page)
+        document.querySelectorAll('#mobile-menu-overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    });
+</script>
 </body></html>

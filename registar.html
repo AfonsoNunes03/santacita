@@ -87,7 +87,7 @@
 <!-- TopNavBar (Shared Component) - Navigation suppressed for transactional focus per "The Destination Rule" -->
 <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl">
 <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-<div class="text-2xl font-black tracking-tighter text-red-700">PATHFINDER</div>
+<a href="index.html" class="hover:opacity-80 transition-opacity"><div class="text-2xl font-black tracking-tighter text-red-700">PATHFINDER</div></a>
 <a class="text-zinc-600 hover:text-red-700 transition-colors font-['Space_Grotesk'] tracking-tight text-sm font-bold uppercase flex items-center gap-2" href="#">
 <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
                 Voltar
@@ -107,7 +107,7 @@
 <img class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="trail runner athlete silhouette against a dramatic mountain sunrise with deep red and orange highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn21W6BF-KGYxHEzG46MJC698VAGfryZ8JTcVkWCab4NOSdOe7Chc4U4mh-taCnqKaspp95vtW_I8s7OLE9QnzIQJE3B_mpX8ZO4a7oB8hG8ojEGmqan7VGPQJW1bW1ktHHKjbBJeYzfQHlpToVpqcuk1f43dLtQKdy-Kj5lPIdOwW_S8kdR3lcaZ4p54keOIW1663HlVwCcaT3PeRhdGEKlBDvG1B19fr688QMi1Z7ExveTT1MUB1VeYercZavSPFdf1iZYnt4Ez9"/>
 <div class="absolute bottom-8 left-8 right-8 text-white">
 <span class="text-xs uppercase tracking-widest font-bold opacity-75">Join the Legend</span>
-<h2 class="text-2xl font-black leading-tight mt-2">Trilhos dos Templários</h2>
+<a href="index.html" class="hover:opacity-80 transition-opacity"><h2 class="text-2xl font-black leading-tight mt-2">Trilhos dos Templários</h2></a>
 </div>
 </div>
 <!-- Form Side -->
@@ -190,7 +190,7 @@
 <footer class="w-full border-t border-zinc-200 bg-zinc-50">
 <div class="py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
 <div class="flex flex-col items-center md:items-start gap-2 mb-8 md:mb-0">
-<span class="text-red-700 font-bold font-['Space_Grotesk'] text-xl tracking-tighter">PATHFINDER</span>
+<a href="index.html" class="hover:opacity-80 transition-opacity"><span class="text-red-700 font-bold font-['Space_Grotesk'] text-xl tracking-tighter">PATHFINDER</span></a>
 <p class="font-['Manrope'] text-xs uppercase tracking-widest text-zinc-400">© 2024 Digital Pathfinder Trail Club.</p>
 </div>
 <div class="flex gap-8">
@@ -200,4 +200,51 @@
 </div>
 </div>
 </footer>
+<!-- Added Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[100] bg-white dark:bg-zinc-950 p-8 flex flex-col gap-8 transition-all duration-300">
+    <div class="flex justify-between items-center border-b border-zinc-200 pb-4">
+        <span class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 uppercase">MENU</span>
+        <button id="close-menu-btn" class="material-symbols-outlined text-4xl hover:text-red-700 transition-colors">close</button>
+    </div>
+    <nav class="flex flex-col gap-6 text-2xl font-bold uppercase tracking-tight">
+        <a href="index.html" class="hover:text-red-700 transition-colors">Home</a>
+        <a href="eventos.html" class="hover:text-red-700 transition-colors">Eventos</a>
+        <a href="galeria.html" class="hover:text-red-700 transition-colors">Galeria</a>
+        <a href="sobre-equipa.html" class="hover:text-red-700 transition-colors">Sobre Nós</a>
+        <a href="comunidade.html" class="hover:text-red-700 transition-colors">Comunidade</a>
+        <a href="loja-oficial.html" class="hover:text-red-700 transition-colors">Loja</a>
+        <a href="contactos.html" class="hover:text-red-700 transition-colors">Contacto</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-zinc-200">
+        <a href="perfil-atleta.html" class="flex items-center gap-4 bg-red-700 text-white p-4 rounded-xl font-bold justify-center hover:bg-black transition-all">
+            <span class="material-symbols-outlined">person</span>
+            MEU PAINEL
+        </a>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const close = document.getElementById('close-menu-btn');
+        
+        btn?.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        close?.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Ensure nav links are closed when clicked (for single-page feel even though they are multi-page)
+        document.querySelectorAll('#mobile-menu-overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    });
+</script>
 </body></html>

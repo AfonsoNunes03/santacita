@@ -82,9 +82,9 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-[#f8f9fa] dark:bg-gray-900 backdrop-blur-md opacity-90 shadow-sm dark:shadow-none">
 <div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
-<div class="text-2xl font-black tracking-tighter text-[#191c1d] dark:text-gray-100 uppercase">
+<a href="index.html" class="hover:opacity-80 transition-opacity"><div class="text-2xl font-black tracking-tighter text-[#191c1d] dark:text-gray-100 uppercase">
                 Trilhos dos Templários
-            </div>
+            </div></a>
 <!-- Desktop Links -->
 <div class="hidden md:flex space-x-8 items-center">
 <a class="font-['Manrope'] font-medium text-sm tracking-tight text-[#c1121f] dark:text-[#c1121f] font-bold border-b-2 border-[#c1121f] pb-1" href="eventos.html">Eventos</a>
@@ -98,7 +98,7 @@
 <span class="material-symbols-outlined cursor-pointer hover:text-[#970012] transition-all duration-300">language</span>
 <a href="login.html" title="Login"><span class="material-symbols-outlined cursor-pointer hover:text-[#970012] transition-all duration-300">account_circle</span></a>
 <!-- Mobile Menu Icon -->
-<span class="material-symbols-outlined md:hidden">menu</span>
+<span class="material-symbols-outlined md:hidden cursor-pointer" id="mobile-menu-btn"">menu</span>
 </div>
 </div>
 </nav>
@@ -111,9 +111,9 @@
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
 <div class="max-w-2xl text-white">
-<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 leading-none">
+<a href="index.html" class="hover:opacity-80 transition-opacity"><h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 leading-none">
                         Trilhos dos Templários
-                    </h1>
+                    </h1></a>
 <p class="text-xl md:text-2xl font-light mb-8 opacity-90 tracking-tight">
                         Conquiste o Trilho. Honre o Legado.<br/>
 <span class="font-medium text-primary-fixed">Santa Cita - Tomar, Portugal</span>
@@ -269,9 +269,9 @@
 <footer class="w-full py-12 mt-20 bg-[#f3f4f5] dark:bg-gray-800">
 <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
 <div class="space-y-6">
-<div class="font-bold text-[#191c1d] dark:text-white text-xl">
+<a href="index.html" class="hover:opacity-80 transition-opacity"><div class="font-bold text-[#191c1d] dark:text-white text-xl">
                     Trilhos dos Templários
-                </div>
+                </div></a>
 <p class="font-['Manrope'] text-sm leading-relaxed text-gray-500 dark:text-gray-400 max-w-xs">
                     Honrando o passado através da superação desportiva no coração de Portugal.
                 </p>
@@ -300,4 +300,51 @@
             </p>
 </div>
 </footer>
+<!-- Added Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[100] bg-white dark:bg-zinc-950 p-8 flex flex-col gap-8 transition-all duration-300">
+    <div class="flex justify-between items-center border-b border-zinc-200 pb-4">
+        <span class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 uppercase">MENU</span>
+        <button id="close-menu-btn" class="material-symbols-outlined text-4xl hover:text-red-700 transition-colors">close</button>
+    </div>
+    <nav class="flex flex-col gap-6 text-2xl font-bold uppercase tracking-tight">
+        <a href="index.html" class="hover:text-red-700 transition-colors">Home</a>
+        <a href="eventos.html" class="hover:text-red-700 transition-colors">Eventos</a>
+        <a href="galeria.html" class="hover:text-red-700 transition-colors">Galeria</a>
+        <a href="sobre-equipa.html" class="hover:text-red-700 transition-colors">Sobre Nós</a>
+        <a href="comunidade.html" class="hover:text-red-700 transition-colors">Comunidade</a>
+        <a href="loja-oficial.html" class="hover:text-red-700 transition-colors">Loja</a>
+        <a href="contactos.html" class="hover:text-red-700 transition-colors">Contacto</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-zinc-200">
+        <a href="perfil-atleta.html" class="flex items-center gap-4 bg-red-700 text-white p-4 rounded-xl font-bold justify-center hover:bg-black transition-all">
+            <span class="material-symbols-outlined">person</span>
+            MEU PAINEL
+        </a>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const close = document.getElementById('close-menu-btn');
+        
+        btn?.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        close?.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Ensure nav links are closed when clicked (for single-page feel even though they are multi-page)
+        document.querySelectorAll('#mobile-menu-overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    });
+</script>
 </body></html>

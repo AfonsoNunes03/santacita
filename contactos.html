@@ -84,9 +84,9 @@
 <body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl shadow-sm">
 <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-<div class="text-2xl font-black text-red-700 uppercase tracking-tighter font-headline">
+<a href="index.html" class="hover:opacity-80 transition-opacity"><div class="text-2xl font-black text-red-700 uppercase tracking-tighter font-headline">
                 TRILHOS TEMPLÁRIOS
-            </div>
+            </div></a>
 <nav class="hidden md:flex items-center gap-8 font-headline font-bold tracking-tight">
 <a class="text-slate-600 hover:text-red-600 transition-colors" href="eventos.html">Eventos</a>
 <a class="text-slate-600 hover:text-red-600 transition-colors" href="galeria.html">Galeria</a>
@@ -203,11 +203,58 @@
 <div class="flex flex-col md:flex-row items-center gap-8 font-label text-sm tracking-wide">
 <a class="text-slate-500 hover:text-red-700 underline decoration-2 underline-offset-4 transition-all" href="#">Privacy Policy</a>
 <a class="text-slate-500 hover:text-red-700 underline decoration-2 underline-offset-4 transition-all" href="#">Terms of Service</a>
-<a class="text-red-600 font-semibold underline decoration-2 underline-offset-4 transition-all" href="#">Contact Us</a>
+<a class="text-red-600 font-semibold underline decoration-2 underline-offset-4 transition-all" href="contactos.html">Contact Us</a>
 </div>
 </div>
 <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200/60 text-center md:text-left">
 <p class="text-slate-400 text-xs font-medium">© 2024 Trilhos dos Templários. Todos os direitos reservados.</p>
 </div>
 </footer>
+<!-- Added Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[100] bg-white dark:bg-zinc-950 p-8 flex flex-col gap-8 transition-all duration-300">
+    <div class="flex justify-between items-center border-b border-zinc-200 pb-4">
+        <span class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 uppercase">MENU</span>
+        <button id="close-menu-btn" class="material-symbols-outlined text-4xl hover:text-red-700 transition-colors">close</button>
+    </div>
+    <nav class="flex flex-col gap-6 text-2xl font-bold uppercase tracking-tight">
+        <a href="index.html" class="hover:text-red-700 transition-colors">Home</a>
+        <a href="eventos.html" class="hover:text-red-700 transition-colors">Eventos</a>
+        <a href="galeria.html" class="hover:text-red-700 transition-colors">Galeria</a>
+        <a href="sobre-equipa.html" class="hover:text-red-700 transition-colors">Sobre Nós</a>
+        <a href="comunidade.html" class="hover:text-red-700 transition-colors">Comunidade</a>
+        <a href="loja-oficial.html" class="hover:text-red-700 transition-colors">Loja</a>
+        <a href="contactos.html" class="hover:text-red-700 transition-colors">Contacto</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-zinc-200">
+        <a href="perfil-atleta.html" class="flex items-center gap-4 bg-red-700 text-white p-4 rounded-xl font-bold justify-center hover:bg-black transition-all">
+            <span class="material-symbols-outlined">person</span>
+            MEU PAINEL
+        </a>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const close = document.getElementById('close-menu-btn');
+        
+        btn?.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        close?.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Ensure nav links are closed when clicked (for single-page feel even though they are multi-page)
+        document.querySelectorAll('#mobile-menu-overlay a').forEach(link => {
+            link.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    });
+</script>
 </body></html>
