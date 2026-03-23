@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#5c403d",
+              "on-surface": "#191c1d",
+              "on-background": "#191c1d",
+              "on-primary-fixed-variant": "#930011",
+              "on-tertiary-container": "#c6dfff",
+              "on-primary-fixed": "#410003",
+              "surface-dim": "#d9dadb",
+              "secondary-fixed": "#b1f0ce",
+              "surface-container-lowest": "#ffffff",
+              "surface-tint": "#bd0d1d",
+              "on-secondary-container": "#316e52",
+              "secondary-container": "#aeeecb",
+              "on-tertiary-fixed-variant": "#00497c",
+              "error": "#ba1a1a",
+              "surface-bright": "#f8f9fa",
+              "tertiary-fixed": "#d1e4ff",
+              "surface-container-high": "#e7e8e9",
+              "tertiary": "#004c7f",
+              "surface-container": "#edeeef",
+              "surface": "#f8f9fa",
+              "on-primary-container": "#ffd2ce",
+              "on-error-container": "#93000a",
+              "outline-variant": "#e5bdb9",
+              "primary-fixed-dim": "#ffb3ad",
+              "on-tertiary": "#ffffff",
+              "primary-container": "#c1121f",
+              "surface-container-highest": "#e1e3e4",
+              "secondary-fixed-dim": "#95d4b3",
+              "on-tertiary-fixed": "#001d35",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#002114",
+              "on-secondary": "#ffffff",
+              "background": "#f8f9fa",
+              "tertiary-fixed-dim": "#9dcaff",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "surface-container-low": "#f3f4f5",
+              "secondary": "#2c694e",
+              "outline": "#906f6c",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f0f1f2",
+              "inverse-primary": "#ffb3ad",
+              "on-secondary-fixed-variant": "#0e5138",
+              "primary": "#970012",
+              "primary-fixed": "#ffdad6",
+              "tertiary-container": "#0064a6",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-2xl font-black text-red-700 uppercase tracking-tighter font-headline">
+                TRILHOS TEMPLÁRIOS
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-red-600 transition-colors font-headline font-bold" href="#">Eventos</a>
+<a class="text-slate-600 hover:text-red-600 transition-colors font-headline font-bold" href="#">Galeria</a>
+<a class="text-slate-600 hover:text-red-600 transition-colors font-headline font-bold" href="#">Comunidade</a>
+<a class="text-slate-600 hover:text-red-600 transition-colors font-headline font-bold" href="#">Loja</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100/50 rounded-lg transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-600">language</span>
+</button>
+<button class="p-2 hover:bg-slate-100/50 rounded-lg transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-600">account_circle</span>
+</button>
+</div>
+</div>
+<div class="bg-slate-100/50 h-[1px] w-full absolute bottom-0"></div>
+</header>
+<main class="pt-20">
+<!-- Hero / About Intro -->
+<section class="relative py-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2">
+<span class="text-secondary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">A Nossa Origem</span>
+<h1 class="text-6xl md:text-8xl font-headline font-black text-on-surface tracking-tighter leading-none mb-8">
+                        O Trilho do <span class="text-primary">Destino.</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-lg font-light">
+                        Não somos apenas uma corrida de trail. Somos os guardiões de um legado secular que atravessa as colinas de Santa Cita, unindo o espírito desportivo à mística dos Templários.
+                    </p>
+</div>
+<div class="md:w-1/2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700">
+<img class="w-full h-full object-cover" data-alt="dramatic wide shot of a trail runner navigating a rocky ridgeline during a misty morning in the portuguese hills" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBRVY7nhR6zMDoi7aGFs7rbo_jFgDXCXkBdpNUBBRKYivhRtQ9WyvkiGrs5Gv6QjN1IIfYASujEDGzGFNwOA8kKzZrJaCTQKPkub6nXdBD2b2CJTZYV9821dfGllzK6JlLpU2Cb1ikKOxAVGByeagzlTx_ivQDFGRz5V4rWMBtypILZigewhKihAn0WJ4SvZ90LSrw6KoaxgmxDBju57mHcx5SZ5E6ddNJ-BeLGawYL7YQ-36f5tjUMJ7hOj05cMSQt0ECOQD1uC0_"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-white p-8 rounded-lg shadow-xl hidden md:block max-w-[240px]">
+<p class="text-primary font-headline font-bold text-4xl mb-1">12+</p>
+<p class="text-sm font-bold text-on-surface-variant uppercase tracking-tighter">Anos de Tradição e Superação</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Santa Cita Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7">
+<div class="rounded-2xl overflow-hidden shadow-sm aspect-video">
+<img class="w-full h-full object-cover" data-alt="lush green forest interior with sunlight filtering through ancient oak trees and a narrow dirt trail winding into the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzrXkXmzZGldyqi0jn5VOvufldAPul8GlJ8ahTaIDss2XwSj2D3AkUojpYtDzZqU672uGGWl0ev2nVqj2xLlroBEUPMhO1bxayttzvsMZ0QUUQj5_2e7PZ9cO_7CGCHFX-9Gn_FYc7_Wuysq9mjR9_idUocbbHaVTFJTxFV9zc-c9K9J3hAuLRutI1F82Fbg4NblgFU0OB4PUEQOwX_rlA-JX_gko_WFRc9viirb23zJrrXuVZuN5V-o9M90LXTAt55n8Mlo7V3LY-"/>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col justify-center">
+<h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Santa Cita: Onde a Natureza Resiste</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                            Aninhada entre vales profundos e o sussurro do rio, Santa Cita oferece mais do que um percurso técnico. É um santuário de biodiversidade, onde cada passada ecoa nos trilhos que outrora foram calcorreados por cavaleiros. 
+                        </p>
+<div class="bg-surface-container-highest p-6 rounded-lg border-l-4 border-primary">
+<p class="italic text-on-surface font-medium">"Correr aqui é sentir o peso da história sob os pés e a pureza do ar nos pulmões."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Organization / Mission -->
+<section class="py-32">
+<div class="max-w-7xl mx-auto px-6 text-center mb-20">
+<h2 class="text-5xl font-headline font-black tracking-tight mb-6">A Nossa Missão &amp; Legado</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="bg-surface-container p-10 rounded-xl transition-all hover:shadow-lg">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">shield</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Preservação Histórica</h3>
+<p class="text-on-surface-variant font-light">Comprometemo-nos com a reabilitação de antigos caminhos rurais, mantendo viva a cartografia histórica da região de Tomar.</p>
+</div>
+<div class="bg-surface-container p-10 rounded-xl transition-all hover:shadow-lg">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">eco</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Ética Ambiental</h3>
+<p class="text-on-surface-variant font-light">Promovemos o "Zero Trace". Cada evento é planeado para ter impacto nulo na fauna e flora local, regenerando o que tocamos.</p>
+</div>
+<div class="bg-surface-container p-10 rounded-xl transition-all hover:shadow-lg">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">groups_3</span>
+<h3 class="text-2xl font-headline font-bold mb-4">Comunidade Local</h3>
+<p class="text-on-surface-variant font-light">O nosso evento é o motor da economia circular de Santa Cita, envolvendo artesãos, produtores e voluntários locais.</p>
+</div>
+</div>
+</section>
+<!-- Team Section (25 Members Grid) -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="text-primary font-headline font-bold uppercase tracking-widest text-sm mb-4 block">Equipa Técnica</span>
+<h2 class="text-5xl font-headline font-black tracking-tight">Os Rostos por Trás do Trilho</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm text-right font-light">
+                        Vinte e cinco mentes apaixonadas que garantem a segurança, a logística e a magia de cada edição.
+                    </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+<!-- Member Card Template Repeated 25 times with placeholder names -->
+<div class="group">
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="portrait of a focused professional man with a friendly expression in outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEiHyINUW6d-K-AnpzTEHCwy_icGDREjoGPdMFXBRBJDguqOP4JOHoUZNc10PtxJlZOxNDM1jgSrDWtu--wnpTd3RA0spDk1iB4PBtTHD8TD_UfCDG6euxy_0mjU4qtBiCpWICJ0NPXyVO7P8gF2nrcEq9MUV0wS1dx4AJ4hzCeRK-EFliR6kh6CGJu9ey4MgwtCqQq_ybrzqlXX2WYoicxtK7zQLCHbstqIXnZyCid-mL4oyy73tVB7kTg-wggzsKSxI_b0DAgFjU"/>
+</div>
+<h4 class="font-headline font-bold text-on-surface group-hover:text-primary transition-colors">João Silva</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Diretor de Prova</p>
+</div>
+<div class="group">
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional woman with confident gaze in a natural outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8B6OXws6VVclJkh_5ONXeGQ0JbduKicP00rC-mHVhs_fepquNR4b2h2UE3CAaPQRvkAR776I9832Mr8BWIMCaSQ_k2PPdGdGHh7d1S-Wumw588IrOn1vkwoEHwpGTmKOFGeWyJ_ZQDFh4bE_CCTRf0Fpz4509k0dXmzveYnHU7aelq8BO28-xeOF7lb_pyUzyJEY83AzBRCqNHEs9_OCEr66tCjAkB36EIHxCtUlMdIzVcRJjchIpEh_7qp2CuWDOqcT_x6fHAoE1"/>
+</div>
+<h4 class="font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Maria Ferreira</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Coordenadora Logística</p>
+</div>
+<!-- Mocking the remaining 23 members for the requested grid -->
+<div class="group">
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden mb-4 grayscale">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a man smiling warmly with mountain background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMcBJ7u4vrlYBz_3sANJmoXF6oKgV_NUmgufF5tWbqSZ02Yvj1FpR63E9Cvw5C6SOO0GNUc9Ph12YH-X2-3EgZ2b1OyhnRnmzvVrMo2AYwzr9NNVPYCIP3Kau3HTTQ0NiL9m_b6_QLdmgZbn08FzcwfaYPVvb3eiYhWCFX-TqrNJ3bpth4I5pzBtQOAScj9cSnQPWw_ERSk6jpuCI8Y_cTu7NUFcyGtJpmxLuwY-zZ3FPrlrgOuyek7BdCgeVM-LraOzz8S-548vIf"/>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Ricardo Gomes</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Segurança de Montanha</p>
+</div>
+<div class="group">
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden mb-4 grayscale">
+<img class="w-full h-full object-cover" data-alt="portrait of a woman athlete with hair tied back in sportswear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpz67MsVaQ6BigXc1QzEMCNJW_BzTkTYVoRmpngHN3XJpNLdUm80BQmDejaztfFPafy2IheGpsDbRxu2NJ7mjMA6TG6mus4gMRo8daFr0UPhohkEZViuq9OFq7Y4ZeAwlREF02lkUfCoJHb5b-ZK5nkeQidBcctUugO1U8jt0txq-Zqrlt2wzViqxP_rS-13c2EphGW9qTqfclMI884lEJzFWZWsu0QLXrV3dZ-NjW5H5MeBBmNpbTNDcmFqMexVNOx2B5_KxxQk3c"/>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Ana Martins</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Relações Atletas</p>
+</div>
+<div class="group">
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden mb-4 grayscale">
+<img class="w-full h-full object-cover" data-alt="portrait of a young man with beard and athletic attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrYsSAOTaO1uLGEZ2oYToGkd29pRQ78MZ4gyU6arB7FAfB8nlMijvQ4Dwus12bKVnxGAt1DpQOdOU71HY5nEL8Mcn0trcUJS71VC-Mny0TmehVdUWrDkvUHDQ3hIrR_WYpBrHUH0mOnNrGphLKZlojGJj0Q_UlMw8yNVpgh8Q1FecYB5VcqUq3h0KIOraDSRf9nLMi1d1hXPbcRRob9lM6ZseYb5iJuYlD-drhJ63IASSOLMxALBX_Ifk3Dmp5ZfRgv4WAqG59mro"/>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Tiago Santos</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Sinalização de Trilhos</p>
+</div>
+<!-- Simplified remaining member slots for visual representation of the grid -->
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+<div class="group opacity-80"><div class="aspect-square bg-slate-200 rounded-lg mb-4"></div><h4 class="font-headline font-bold">Membro da Equipa</h4><p class="text-xs uppercase">Staff</p></div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Contact Hub -->
+<section class="py-32 bg-primary overflow-hidden relative">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover" data-alt="textured topographic map pattern with subtle organic lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMQDucT6UOUgFzeOZ69keHCsNw34Hd25WuZByq3iS7aMc1RiTvWYDQsFm2j9FMsC-p6pXM8LnxjnwkNRWDmrgxQqjLCaaxPnqnIsH1qsv5HaaMU0rDDdShw98Wjqppdvd63X-yR-66eNyx0shWCMu-kc_Css1FVGixxt7ArurKgG8Ocn5KP8s5gzQnHW_57gZuEB5PcoanbajpuKoPnIvWYgfDoZ50p08lzh3EMiQnec5Epb3QeQnsqVTcX47Yk5wwSKLLxHP2nGSc"/>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<h2 class="text-5xl md:text-7xl font-headline font-black text-on-primary mb-8 tracking-tighter">Pronto para o Próximo <br/>Capítulo?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-surface-container-lowest text-primary px-10 py-5 rounded font-headline font-bold text-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95 shadow-xl">Inscreve-te Agora</button>
+<button class="border-2 border-on-primary text-on-primary px-10 py-5 rounded font-headline font-bold text-lg hover:bg-on-primary hover:text-primary transition-all active:scale-95">Saber Mais</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 py-12 px-6">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full gap-8">
+<div class="font-headline font-black text-slate-900 text-xl">TRILHOS TEMPLÁRIOS</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-red-700 underline decoration-2 underline-offset-4 text-sm font-label tracking-wide" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-red-700 underline decoration-2 underline-offset-4 text-sm font-label tracking-wide" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-red-700 underline decoration-2 underline-offset-4 text-sm font-label tracking-wide" href="#">Contact Us</a>
+</div>
+<div class="text-slate-500 text-sm font-label tracking-wide">© 2024 Trilhos dos Templários. BY HARTEG</div>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-xl flex justify-around items-center py-4 border-t border-slate-100 z-50">
+<div class="flex flex-col items-center gap-1 text-red-700">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="text-[10px] font-bold">Sobre</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">event</span>
+<span class="text-[10px]">Eventos</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="text-[10px]">Galeria</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px]">Comunidade</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "primary-fixed-dim": "#ffb3ac",
+              "outline": "#8f6f6c",
+              "on-tertiary-fixed-variant": "#374952",
+              "on-secondary-container": "#5a666d",
+              "primary-container": "#d32f2f",
+              "surface-bright": "#f8f9fa",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#410003",
+              "surface-container-low": "#f3f4f5",
+              "secondary-container": "#d7e4ec",
+              "tertiary-container": "#5f737c",
+              "on-surface-variant": "#5b403d",
+              "on-tertiary-fixed": "#0a1e26",
+              "outline-variant": "#e4beba",
+              "on-secondary-fixed": "#111d23",
+              "tertiary": "#475a63",
+              "surface-tint": "#ba1a20",
+              "on-secondary-fixed-variant": "#3c494f",
+              "surface-container-highest": "#e1e3e4",
+              "error": "#ba1a1a",
+              "secondary": "#546067",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#fff2f0",
+              "surface-container": "#edeeef",
+              "secondary-fixed": "#d7e4ec",
+              "inverse-on-surface": "#f0f1f2",
+              "on-background": "#191c1d",
+              "background": "#f8f9fa",
+              "on-tertiary-container": "#e9f7ff",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d9dadb",
+              "inverse-primary": "#ffb3ac",
+              "surface-variant": "#e1e3e4",
+              "on-primary-fixed-variant": "#930010",
+              "tertiary-fixed": "#d1e6f0",
+              "primary": "#af101a",
+              "on-surface": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#ffdad6",
+              "surface": "#f8f9fa",
+              "tertiary-fixed-dim": "#b5cad4",
+              "surface-container-high": "#e7e8e9",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#bbc8d0"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed-dim">
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r border-slate-100 bg-surface-container-lowest z-50">
+<div class="p-6">
+<h1 class="text-xl font-black text-primary font-headline uppercase tracking-tighter italic">Templar Trail</h1>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/60 mt-1">Precision Heritage</p>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-surface-container-low transition-all" href="#">
+<span class="material-symbols-outlined">terrain</span>
+<span class="font-label uppercase tracking-widest text-xs">Home</span>
+</a>
+<a class="flex items-center gap-3 bg-surface-container-low text-primary font-bold px-4 py-3 border-r-4 border-primary transition-all scale-[0.98]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label uppercase tracking-widest text-xs">Community</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-surface-container-low transition-all" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label uppercase tracking-widest text-xs">Gear Shop</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-surface-container-low transition-all" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-label uppercase tracking-widest text-xs">Training Logs</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-surface-container-low transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label uppercase tracking-widest text-xs">Admin Panel</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-surface-container-low transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label uppercase tracking-widest text-xs">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-outline-variant/10">
+<div class="flex items-center gap-3 p-2 bg-surface-container-low rounded-sm">
+<img alt="User Profile" class="w-10 h-10 rounded-sm object-cover" data-alt="professional portrait of a trail runner in athletic gear with a confident expression, outdoor natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQPdkhDR_XHbtKx6hotwQ8xPC3phC4wKiIUjs98LTGu_yCh4b6fGUUB5iCyedkX5aheqqXdb5gZRQw9131m54tk4zEWn-o_HfAcpClRibuL8HLc_1K32Lk0wT_XygSv78SNDRJp6oZ8u4efaYLoucoGTT9Aesv8HEpc7z39xrzHYqbzdJIdDZtsCPlr8sA6EZitqCaqYbf7UR_z0T2iHTyBQWgCZmAe0zo4grfOfiLEaA8GmGiA2vGHJCoKQncXhLw8yVXWX9H6V3B"/>
+<div>
+<p class="text-xs font-bold font-headline uppercase">Afonso Cruz</p>
+<p class="text-[10px] text-on-surface-variant">Elite Member</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar (Mobile Only & Navigation for Desktop) -->
+<header class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md lg:pl-64">
+<div class="flex justify-between items-center px-6 h-16 max-w-full mx-auto">
+<div class="flex items-center gap-4">
+<h1 class="text-2xl font-bold italic tracking-tighter text-primary font-headline lg:hidden">TT</h1>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-slate-600 hover:text-primary transition-colors font-headline font-bold text-sm" href="#">Feed</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-headline font-bold text-sm" href="#">Shop</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-headline font-bold text-sm" href="#">Dashboard</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-headline font-bold text-sm" href="#">Events</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-on-surface-variant">language</span>
+</button>
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="bg-surface-container-low border-none text-xs rounded-sm pl-9 pr-4 py-2 w-48 focus:ring-1 focus:ring-primary/30" placeholder="Search athletes..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-sm font-headline font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:translate-x-0.5 transition-transform">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+<span class="hidden sm:inline">Partilhar treino</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 lg:pl-64 min-h-screen">
+<div class="max-w-5xl mx-auto px-4 md:px-8 py-8">
+<!-- Feed Layout: Asymmetric Bento Style -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Primary Feed -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Quick Stats Header -->
+<div class="bg-surface-container-highest p-6 rounded-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
+<div>
+<h2 class="font-headline font-bold text-2xl tracking-tight text-on-surface">Community Feed</h2>
+<p class="text-on-surface-variant font-body text-sm">Real-time performance from the Templar trails.</p>
+</div>
+<div class="flex gap-2 overflow-x-auto hide-scrollbar w-full md:w-auto">
+<span class="bg-primary text-on-primary px-3 py-1 text-[10px] font-bold font-label uppercase whitespace-nowrap">All Activities</span>
+<span class="bg-surface-container-lowest text-on-surface-variant px-3 py-1 text-[10px] font-bold font-label uppercase whitespace-nowrap border border-outline-variant/20">Trail Run</span>
+<span class="bg-surface-container-lowest text-on-surface-variant px-3 py-1 text-[10px] font-bold font-label uppercase whitespace-nowrap border border-outline-variant/20">Road</span>
+<span class="bg-surface-container-lowest text-on-surface-variant px-3 py-1 text-[10px] font-bold font-label uppercase whitespace-nowrap border border-outline-variant/20">Hiking</span>
+</div>
+</div>
+<!-- Feed Item 1: Post with Image -->
+<article class="bg-surface-container-lowest rounded-sm border-l-4 border-primary transition-all duration-300">
+<div class="p-6">
+<header class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<img alt="Ricardo Santos" class="w-12 h-12 rounded-sm object-cover" data-alt="rugged trail runner portrait with sweat and determination, high contrast mountain lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYFaHyrUNYYlSP0xfhTw3RkT-CuGTWpACHY2PhmvHsutzOd26__wIBfaK4c-JLP4S1BNP7UA5879l7FTbX69iKNTcnjUK7AViUco1cst_YZolfzJr5_TYl_lxfkgwD174kNs0ltByNHULiSUl8I66_4dZxQi3fek2RNYujpmiqPVHQuYo94rpfZnP3_M58El8Q_OuPYHmRb3xZZLF88ZXWH-StU22qr7qPnotGUq2ydcaiKonssCpTfPSmHP6A8jIlgqDpF4c0KHw1"/>
+<div>
+<h3 class="font-headline font-bold text-lg leading-tight uppercase">Ricardo Santos</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Serra de Tomar, Portugal</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>2h ago</span>
+</div>
+</div>
+</div>
+<div class="bg-secondary-container px-3 py-1 rounded-sm">
+<span class="font-label font-bold text-[10px] text-on-secondary-container uppercase tracking-tighter">Trail Run</span>
+</div>
+</header>
+<p class="text-on-surface-variant font-body text-sm mb-6 leading-relaxed">
+                                "Sexta-feira santa nos trilhos. A subida do calvário nunca foi tão técnica, mas o visual do topo compensa cada gota de suor. Preparação para o Templar XTerra a todo o gás!"
+                            </p>
+<!-- The Sentinel Stats Card -->
+<div class="grid grid-cols-3 gap-px bg-outline-variant/20 mb-6 overflow-hidden border border-outline-variant/20">
+<div class="bg-surface-container-highest p-4 border-t-2 border-primary">
+<span class="font-label font-bold text-[10px] text-on-surface-variant uppercase block mb-1">Distance</span>
+<span class="font-headline font-bold text-xl">18.4<span class="text-sm font-medium ml-1">km</span></span>
+</div>
+<div class="bg-surface-container-highest p-4 border-t-2 border-primary">
+<span class="font-label font-bold text-[10px] text-on-surface-variant uppercase block mb-1">Duration</span>
+<span class="font-headline font-bold text-xl">01:42<span class="text-sm font-medium ml-1">h</span></span>
+</div>
+<div class="bg-surface-container-highest p-4 border-t-2 border-primary">
+<span class="font-label font-bold text-[10px] text-on-surface-variant uppercase block mb-1">Elevation</span>
+<span class="font-headline font-bold text-xl">640<span class="text-sm font-medium ml-1">m</span></span>
+</div>
+</div>
+<div class="relative group cursor-pointer mb-6">
+<img alt="Training View" class="w-full h-80 object-cover rounded-sm grayscale-[30%] group-hover:grayscale-0 transition-all duration-500" data-alt="dramatic wide shot of a lone runner on a technical mountain ridge at sunrise with mist in the valleys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx4BFXJ-2OSkWHQJ_o-miU_jIJkoFFDBawuxHTRB4V3raftkd5j-1a2WDPuNtnnmBUnzfEEtpWLV0C3a-9lUHjgR8Q1QEhXuov_tmmpzAbDovaVBfbZY9iAUVfCs2EzNcIgHMfLSDm7EDMp1rEOb1z2bjaldWixgnHx1KiD0Z6yuPTpWqv4XX6bJPXshsxiIAM9W8o2XZI31COkVSmMCW83UPATnqIRZa2qN9pjUwGRSWlmuSlcYMJj9yToX8ehKBGw9hicgSDWUwZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<footer class="flex items-center gap-6 pt-2">
+<button class="flex items-center gap-2 group transition-all">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold font-headline uppercase">24 Likes</span>
+</button>
+<button class="flex items-center gap-2 group transition-all">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">chat_bubble</span>
+<span class="text-xs font-bold font-headline uppercase">6 Comments</span>
+</button>
+<button class="ml-auto p-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">share</span>
+</button>
+</footer>
+</div>
+</article>
+<!-- Feed Item 2: Walk Activity -->
+<article class="bg-surface-container-lowest rounded-sm border-l-4 border-secondary transition-all duration-300">
+<div class="p-6">
+<header class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<img alt="Sofia Mendes" class="w-12 h-12 rounded-sm object-cover" data-alt="female athlete headshot with natural light, wearing technical running jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoTz3y7C1Ws-sSHEXxNnES9IyCHu58_pcc2ZzXHGmjnbFkoCKTowytRg7E5Qnpfyk3uVMuExx01wDbimododOuqD8XnG6j24qcqy_in9jyDVLZn68ncZ4w8xO748QNPr9hlPcjNURucKp847NzXVeC_bTE_qBDqLBC8nWFnyQLE7xgeVxB00qsGbYfzmFNbc0bnNarFss7NxOc9L4roH4TryfiV7mVPs0i-SIxYBJFpNgekqYN98dlADsuTFWsEet5Fg3uo5xder0I"/>
+<div>
+<h3 class="font-headline font-bold text-lg leading-tight uppercase">Sofia Mendes</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Trilho dos Cavaleiros</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>5h ago</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest px-3 py-1 rounded-sm">
+<span class="font-label font-bold text-[10px] text-on-surface-variant uppercase tracking-tighter">Active Walk</span>
+</div>
+</header>
+<p class="text-on-surface-variant font-body text-sm mb-6 leading-relaxed">
+                                Caminhada técnica para recuperação ativa. Focada na cadência e postura. O trilho está seco e rápido hoje.
+                            </p>
+<div class="grid grid-cols-3 gap-px bg-outline-variant/20 mb-2 border border-outline-variant/20 overflow-hidden">
+<div class="bg-surface-container-highest p-4">
+<span class="font-label font-bold text-[10px] text-on-surface-variant uppercase block mb-1">Distance</span>
+<span class="font-headline font-bold text-xl">7.2<span class="text-sm font-medium ml-1">km</span></span>
+</div>
+<div class="bg-surface-container-highest p-4">
+<span class="font-label font-bold text-[10px] text-on-surface-variant uppercase block mb-1">Duration</span>
+<span class="font-headline font-bold text-xl">01:05<span class="text-sm font-medium ml-1">h</span></span>
+</div>
+<div class="bg-surface-container-highest p-4">
+<span class="font-label font-bold text-[10px] text-on-surface-variant uppercase block mb-1">Avg. Pace</span>
+<span class="font-headline font-bold text-xl">9:02<span class="text-sm font-medium ml-1">m/k</span></span>
+</div>
+</div>
+<footer class="flex items-center gap-6 pt-4">
+<button class="flex items-center gap-2 group transition-all">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-bold font-headline uppercase">12 Likes</span>
+</button>
+<button class="flex items-center gap-2 group transition-all">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">chat_bubble</span>
+<span class="text-xs font-bold font-headline uppercase">0 Comments</span>
+</button>
+<button class="ml-auto p-2">
+<span class="material-symbols-outlined text-on-surface-variant">share</span>
+</button>
+</footer>
+</div>
+</article>
+</div>
+<!-- Right Column: Contextual Data & Leaderboard -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Performance Spotlight -->
+<div class="bg-surface-container-highest p-6 border-t-4 border-primary">
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest mb-6">Weekly Leaderboard</h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline font-bold text-primary text-sm italic">01</span>
+<img alt="Athlete" class="w-8 h-8 rounded-sm object-cover" data-alt="portrait of a focused endurance athlete outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzCwB23De7bpB6e6dIa_o3pREit6pVUA4j6bKbn6kuhjtr6HqjeSNwemOj_JYVMCEq0SKnhY17m14xEk1bCYEVWcLmzzuMOkNE_P_wBZGpFBMl7Lx29YHIhQ6Us1xBYCqd6L75zzS3DjgEaayiLsh_w_cAATzkdynYKhdSxyT806ZnHWrQbvJ_kXkKuy2fhPMhD9AsIK7M1HHZzqE-6HT53Pci9AFzI-DbPZ-wofuWKKPK4Abs60UcEnUJiq0f1kj-8JJmtRXWP-uK"/>
+<span class="text-xs font-bold font-headline uppercase">Gonçalo Ramos</span>
+</div>
+<span class="text-xs font-bold">142km</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline font-bold text-on-surface-variant text-sm italic">02</span>
+<img alt="Athlete" class="w-8 h-8 rounded-sm object-cover" data-alt="vibrant outdoor action portrait of female runner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjBafoNg16nf6Wos6Q4uJ35pzkIJABoo7rRcG17Xn4_YOCfNWxVTW_2500LqiOhqiStGbvxXba_i8ebLL5DjGNgVhnJE0IS6d3Fx1ZRUovQyqxnYMYiNO701p0mC-HubKreXCVzKuw3gbsd5TS1Y6PgplDrurd6rFwLMpuq7VmoYWGsYTO1UiWeeX4RXzTJqrJxBFG4mKEAkBA0s_jPHBdDnrPmkqR1T8G3SVyLCGmKSXxpY9NTE-pwZIfQZ3T1kbuaAIUPqlyki__"/>
+<span class="text-xs font-bold font-headline uppercase">Ana Pereira</span>
+</div>
+<span class="text-xs font-bold">128km</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline font-bold text-on-surface-variant text-sm italic">03</span>
+<img alt="Athlete" class="w-8 h-8 rounded-sm object-cover" data-alt="focused athlete profile, cinematic outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARnM8GlUpLz893g9OoMPIdVeg6aniXrQOnIo8YH6QnufoCQcKVeaDEv1PTu4Rc7D_AfNd2xTPUDhSnnSa7QDZ0r4GBwMf_58OLi3NQ9u24FcUm8RD98ahgOWx5-9mfsXiRALZsTofx1WqVc52fHgOxGetqqMqPDeFYNfJPokyc7u3iWqUtyol9q1MdiZ16_AR3PYwMt_MG6Xrq3PFa7MVvmvfVkuAigiopq89jiWoO6SIeb3xc0Cwy6rIH01KWDUNf1YjEj_pFyEe1"/>
+<span class="text-xs font-bold font-headline uppercase">Tiago Silva</span>
+</div>
+<span class="text-xs font-bold">95km</span>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border border-primary/20 text-primary text-[10px] font-label font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">View Full Ranking</button>
+</div>
+<!-- Upcoming Trails Widget -->
+<div class="bg-surface-container-highest p-6">
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest mb-6">Upcoming Trails</h4>
+<div class="space-y-6">
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end mb-2">
+<p class="text-[10px] font-label font-bold text-primary uppercase">Mar 24</p>
+<span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<p class="font-headline font-bold text-sm uppercase">Templar XTerra Challenge</p>
+<p class="text-[10px] text-on-surface-variant uppercase mt-1">Castelo de Bode • 42km</p>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end mb-2">
+<p class="text-[10px] font-label font-bold text-primary uppercase">Apr 12</p>
+<span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<p class="font-headline font-bold text-sm uppercase">Night Raid: Convent Edition</p>
+<p class="text-[10px] text-on-surface-variant uppercase mt-1">Mata dos Sete Montes • 15km</p>
+</div>
+</div>
+</div>
+<!-- Community Badge -->
+<div class="relative overflow-hidden bg-primary p-8 rounded-sm">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl text-white">shield</span>
+</div>
+<h4 class="relative font-headline font-black text-2xl text-on-primary italic leading-none mb-4">JOIN THE<br/>VANGUARD</h4>
+<p class="relative text-on-primary/80 text-xs mb-6">Gain access to exclusive technical gear and early race entry.</p>
+<button class="relative bg-on-primary text-primary px-4 py-2 text-[10px] font-label font-bold uppercase tracking-widest rounded-sm">Upgrade Now</button>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 mt-20 border-t border-slate-200 bg-surface-container-low lg:pl-72">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<p class="font-body text-sm text-on-surface-variant">© 2024 Templar Trail Club. Precision Heritage.</p>
+<div class="flex gap-8">
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline underline-offset-4 decoration-primary transition-all" href="#">Privacy Policy</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline underline-offset-4 decoration-primary transition-all" href="#">Terms of Service</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline underline-offset-4 decoration-primary transition-all" href="#">Shipping</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline underline-offset-4 decoration-primary transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-lg z-50 flex justify-around items-center h-16 border-t border-outline-variant/10">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">terrain</span>
+<span class="text-[10px] font-label font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="text-[10px] font-label font-bold uppercase">Feed</span>
+</button>
+<div class="relative -top-4">
+<button class="bg-primary text-white w-12 h-12 rounded-sm flex items-center justify-center shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-label font-bold uppercase">Logs</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-label font-bold uppercase">Set</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Panel | Templar Trail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "primary-fixed-dim": "#ffb3ac",
+              "outline": "#8f6f6c",
+              "on-tertiary-fixed-variant": "#374952",
+              "on-secondary-container": "#5a666d",
+              "primary-container": "#d32f2f",
+              "surface-bright": "#f8f9fa",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#410003",
+              "surface-container-low": "#f3f4f5",
+              "secondary-container": "#d7e4ec",
+              "tertiary-container": "#5f737c",
+              "on-surface-variant": "#5b403d",
+              "on-tertiary-fixed": "#0a1e26",
+              "outline-variant": "#e4beba",
+              "on-secondary-fixed": "#111d23",
+              "tertiary": "#475a63",
+              "surface-tint": "#ba1a20",
+              "on-secondary-fixed-variant": "#3c494f",
+              "surface-container-highest": "#e1e3e4",
+              "error": "#ba1a1a",
+              "secondary": "#546067",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#fff2f0",
+              "surface-container": "#edeeef",
+              "secondary-fixed": "#d7e4ec",
+              "inverse-on-surface": "#f0f1f2",
+              "on-background": "#191c1d",
+              "background": "#f8f9fa",
+              "on-tertiary-container": "#e9f7ff",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d9dadb",
+              "inverse-primary": "#ffb3ac",
+              "surface-variant": "#e1e3e4",
+              "on-primary-fixed-variant": "#930010",
+              "tertiary-fixed": "#d1e6f0",
+              "primary": "#af101a",
+              "on-surface": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#ffdad6",
+              "surface": "#f8f9fa",
+              "tertiary-fixed-dim": "#b5cad4",
+              "surface-container-high": "#e7e8e9",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#bbc8d0"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Sidebar Navigation Shell -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r border-slate-100 bg-white z-50">
+<div class="px-6 py-8">
+<div class="text-xl font-black text-red-700 tracking-tighter italic">Templar Trail</div>
+<div class="text-[10px] uppercase tracking-[0.2em] font-headline font-bold text-slate-400 mt-1">Precision Heritage</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined">terrain</span>
+<span class="font-headline uppercase tracking-widest text-xs">Home</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-headline uppercase tracking-widest text-xs">Community</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-headline uppercase tracking-widest text-xs">Gear Shop</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-headline uppercase tracking-widest text-xs">Training Logs</span>
+</a>
+<a class="flex items-center gap-3 bg-slate-50 text-red-700 font-bold px-4 py-3 border-r-4 border-red-700 scale-[0.98] duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-headline uppercase tracking-widest text-xs">Admin Panel</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-headline uppercase tracking-widest text-xs">Settings</span>
+</a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<img class="w-10 h-10 rounded-full object-cover grayscale" data-alt="close-up portrait of professional athletic coach with short hair and confident expression against neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqVHK2dvPBbcVLew2BYR4NcukfyhGpYctvFykG2Hku4RcGSev9Lm5JXLHm-uWtoz2S6-PQA5BIyWVtgqCGHe601Tc0EQdh007oldn_I4dIHZALukNp7W21qJBXGBX8YFAHsyaX7GF5FVISXIV7B8BcoXH5iY5Re8M8GLSm2GwiGFqR0_Q50wilptxpMz7QgRk_zw9ztDJZL8h1OnMAUgC5KfIzIvoJzZ2Frix-wAvk73C5YG6T4Qe43XkI4gpBR5URrT2CwsEyI7OU"/>
+<div>
+<p class="text-xs font-bold font-headline">Admin User</p>
+<p class="text-[10px] text-on-surface-variant">Master Control</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 min-h-screen p-6 md:p-12">
+<!-- Header Section -->
+<header class="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<h1 class="text-5xl font-bold tracking-tight text-primary leading-none mb-2">Command Center</h1>
+<p class="text-on-surface-variant max-w-xl font-medium uppercase tracking-tighter text-sm">Managing the heritage of the trail with architectural precision.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 font-headline font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:bg-opacity-80 transition-all">
+<span class="material-symbols-outlined text-sm">download</span> Export Data
+                </button>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-headline font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-0.5 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span> New Entry
+                </button>
+</div>
+</header>
+<!-- Bento Grid Layout for Management -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Manage Events Section (Large Priority) -->
+<section class="md:col-span-8 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold font-headline uppercase tracking-tight flex items-center gap-3">
+<span class="w-8 h-[2px] bg-primary"></span> Manage Events
+                    </h2>
+</div>
+<div class="bg-surface-container-lowest p-8 border-t-2 border-primary shadow-sm space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<label class="block text-[10px] font-bold font-headline uppercase tracking-widest text-on-surface-variant">Event Identity</label>
+<input class="w-full bg-surface border-0 focus:ring-1 focus:ring-primary px-4 py-3 font-headline text-lg font-bold" type="text" value="The Knight's Ascent 2024"/>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-[10px] font-bold font-headline uppercase tracking-widest text-on-surface-variant">Date</label>
+<input class="w-full bg-surface border-0 focus:ring-1 focus:ring-primary px-4 py-2 text-sm" type="date" value="2024-11-24"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold font-headline uppercase tracking-widest text-on-surface-variant">Time (Local)</label>
+<input class="w-full bg-surface border-0 focus:ring-1 focus:ring-primary px-4 py-2 text-sm" type="time" value="06:00"/>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-[10px] font-bold font-headline uppercase tracking-widest text-on-surface-variant">Trail Coordinates</label>
+<input class="w-full bg-surface border-0 focus:ring-1 focus:ring-primary px-4 py-3 font-medium text-sm" type="text" value="Serra da Estrela, Portugal"/>
+<div class="bg-surface p-4 flex items-center justify-between border-l-4 border-primary">
+<div>
+<p class="text-[10px] font-bold uppercase text-on-surface-variant">Live Countdown Status</p>
+<p class="text-2xl font-headline font-black text-primary tracking-tighter">142 : 12 : 44 : 09</p>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-4 border-t border-surface-container pt-6">
+<button class="text-on-surface-variant text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors">Discard Changes</button>
+<button class="bg-primary text-on-primary px-8 py-3 text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">Update Event Portal</button>
+</div>
+</div>
+<!-- Gallery Management -->
+<div class="pt-8">
+<h2 class="text-2xl font-bold font-headline uppercase tracking-tight flex items-center gap-3 mb-6">
+<span class="w-8 h-[2px] bg-primary"></span> Media Assets
+                    </h2>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="group relative aspect-square bg-surface-container-highest flex items-center justify-center cursor-pointer border-2 border-dashed border-outline-variant hover:border-primary transition-colors">
+<div class="text-center">
+<span class="material-symbols-outlined text-3xl text-outline mb-2">upload_file</span>
+<p class="text-[10px] font-bold font-headline uppercase tracking-widest">Add Photo</p>
+</div>
+</div>
+<div class="relative group aspect-square">
+<img class="w-full h-full object-cover" data-alt="dramatic wide shot of a lone trail runner on a ridge at sunrise with mist in the valleys below" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaWeEJj_7PC59LpXc0UEQ4G7s8YUHuOcLah87tYjaJyIUm7nKiaSDpjMOhxeQcmdizVrl9FIHMJoLds9Pi39_8cBWMfNF--WV0ii28BLynFAFVgTJuIb4WbDvePDF1grh3XThKqH3msXzb8S93abDpkeBP5xdxWeYPEEqY-Yg-zcJrWXx7lMGQn3eOjqrwYxtvGhWkAI78SfEIKYq29gFFmWimxLLtmNiBvIdek82XeluAaM3ug9hTCn1SZCld6W6ITGrY5DsBpS46"/>
+<button class="absolute top-2 right-2 bg-primary text-white p-1 opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-sm">close</span></button>
+</div>
+<div class="relative group aspect-square">
+<img class="w-full h-full object-cover" data-alt="close-up of muddy trail running shoes on a rocky path with aggressive tread pattern highlighted" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1HBVFavdmDVnmeCGm168GiRBNiZYgMHgtDa_yoZU9EvVfW8yB1qLiUHA0V4GWyAe5ypeE_aYeGKLGjcrafGYYromEdKLQgmw9Mh2rwM7qSI06vyeEadOnbki0HpdtBrI4PShH7yTXp4ga38x5NZwhFGQSdvg5bSlYF_qoVy209sz6OO_oTBK0ciFGwZxlm7Nnl9uvDr0YY62Xx1dJ3d5ZRLtSpOceb0-nAx7X9-2IlSQ9Mg21UWDTFowrRivCzsZ-IyyaLsDYuXdO"/>
+<button class="absolute top-2 right-2 bg-primary text-white p-1 opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-sm">close</span></button>
+</div>
+<div class="relative group aspect-square">
+<img class="w-full h-full object-cover" data-alt="high contrast black and white photo of a marathon starting line with thousands of runners prepared to move" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBadwLlAevcDClAaIxA2GJg0iIcFU46pPEs4eunXOTtsCv2hK92WyK5VHasZeJfrjw3y3KHvyXSD2YBplC2iVW1PJUQG74y210PIklhhn0A7RVC7Owt64sREag-uMEmnuhVrdCW1eyKTAMLuYtg04fNXMMPqD5eJ7PYxc2rIQMUWIe1-0yodysc3gkWSmg-Jjej6Ma-wQZuyzjLRJI1kPV4-RBG2XYbWFuMsfu8IEuhWAcD7yutj_I6KzSbytJIQAsfcD5tUSw3uGG1"/>
+<button class="absolute top-2 right-2 bg-primary text-white p-1 opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-sm">close</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Stats & Actions -->
+<aside class="md:col-span-4 space-y-8">
+<!-- Sponsor Management -->
+<section>
+<h2 class="text-lg font-bold font-headline uppercase tracking-tight flex items-center gap-3 mb-4">
+<span class="w-4 h-[2px] bg-primary"></span> Partners
+                    </h2>
+<div class="bg-surface-container-low p-6 space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-4 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all border border-transparent hover:border-primary">
+<span class="material-symbols-outlined text-4xl">shield</span>
+</div>
+<div class="bg-surface-container-lowest p-4 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all border border-transparent hover:border-primary">
+<span class="material-symbols-outlined text-4xl">ecg_heart</span>
+</div>
+<div class="bg-surface-container-lowest p-4 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all border border-transparent hover:border-primary">
+<span class="material-symbols-outlined text-4xl">nutrition</span>
+</div>
+<div class="bg-surface-container-lowest p-4 flex items-center justify-center cursor-pointer border-2 border-dashed border-outline-variant hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-outline">add</span>
+</div>
+</div>
+<button class="w-full py-2 text-[10px] font-headline font-bold uppercase tracking-widest text-primary border border-primary hover:bg-primary hover:text-white transition-all">Manage Tier List</button>
+</div>
+</section>
+<!-- System Health Stats -->
+<section class="bg-inverse-surface text-inverse-on-surface p-6 space-y-6">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold font-headline uppercase tracking-widest opacity-70">Platform Status</span>
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="text-xs">Storage Capacity</span>
+<span class="text-lg font-headline font-bold">78%</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="text-xs">API Latency</span>
+<span class="text-lg font-headline font-bold">24ms</span>
+</div>
+</div>
+</section>
+</aside>
+</div>
+<!-- Team Management Section (Full Width Grid) -->
+<section class="mt-20">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold font-headline uppercase tracking-tight flex items-center gap-3">
+<span class="w-8 h-[2px] bg-primary"></span> Templar Squad
+                </h2>
+<div class="flex items-center gap-4">
+<span class="text-[10px] font-bold font-headline uppercase tracking-widest text-on-surface-variant">25 Members Enlisted</span>
+<button class="bg-primary text-on-primary w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">person_add</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<!-- Squad Member Card Template -->
+<div class="group bg-surface-container-lowest p-4 relative overflow-hidden transition-all hover:-translate-y-1">
+<div class="aspect-square mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="headshot of a determined female trail runner with athletic headband and focused gaze outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY5haLgPURxDoCyK5fjs_JenBkK1NnrhBupK1CwzS_bUNaKtBVDL5h3Ae43lHxM56MT7KZ4h3sy8p4dkGkcs3Mdr5Br_3TD-G1rhOAZ-cCHFwqGm7g4xURvIu-GnliNICsic6EfjzDSVFe4RVdPQaW_cXLsZRFoaOGlwYFM9duA8GRYrSCFGmt-svi3xt4U7n28pKqkzCcuLw5Y4F5LN0xLAP4-5YbgP6L_iK6EhrgpR2XFe5vDMWcloqUPGMWzsPZP34FK1JMu1_M"/>
+</div>
+<p class="font-headline font-bold text-sm leading-tight">Elena Vargas</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">Lead Navigator</p>
+<div class="absolute inset-0 bg-primary/90 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-[10px] font-bold text-white uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">edit</span> Edit Profile
+                        </button>
+<button class="text-[10px] font-bold text-white uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                        </button>
+</div>
+</div>
+<!-- Repeated Members for Visual Scale -->
+<div class="group bg-surface-container-lowest p-4 relative overflow-hidden transition-all hover:-translate-y-1">
+<div class="aspect-square mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of an older male mountain guide with weathered skin and kind eyes wearing technical outdoor gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUY97D86HNU4T1MjCkPrYTQwGY9vys7MdM5FEksq2eZp0aDIDvkdGCBivr_m4UaYWviq7x41m113eDhZs8yybzF1sOzBYKReZj491KYMN5ah0ZvtXZk-iljBYN4MXNMnAu62nET_uQQEsGYgL-v23jrVLhOHPEFQE0eCJYltpABezWROFiCoXhCH0ftbaXevzLMmR4PMOVZ6L-y5qPU4xICZfeLxI3xApIugNTBAVbfA2sUeBlx1L2qDkjmvYl8ovp_XiCzhAr-okx"/>
+</div>
+<p class="font-headline font-bold text-sm leading-tight">Marcus Thorne</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">Race Director</p>
+</div>
+<div class="group bg-surface-container-lowest p-4 relative overflow-hidden transition-all hover:-translate-y-1">
+<div class="aspect-square mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of a young female athlete with braided hair looking off camera in dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsKIYbE5bzxOXO-XLYLn9sWiugbOCdUin4kc12OphseUMGiy2Xu3fZf6GzmvdUackpXz792im96KM9HqjRMQNd8LJz1G3JlRej0X_HuDB2Dx0QV7gUSlN7BoBwym--UPbIE8Fu1oilZvMwla7Lvp1CyuPibGZSOb1ASYhEIWYNqxguWdnGf5ajpVVSUCGTEMRjfYncc7pzFc7AFi1RP1g_C656Us9X8vNN4kaY2DRNbubCNUI2qZrPnWobGodiiOIOof3dZnOPxROz"/>
+</div>
+<p class="font-headline font-bold text-sm leading-tight">Sienna Rivers</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">Safety Officer</p>
+</div>
+<div class="group bg-surface-container-lowest p-4 relative overflow-hidden transition-all hover:-translate-y-1">
+<div class="aspect-square mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="close up headshot of a smiling male runner with beard wearing a base layer and tracking watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdXxdfQ1tkCSyd4_mYnOKVMHdnPHHe6b5iWjapJRw5VjIryV0hJGUgz-CjunA7Ha8iPgdfRrm-UevCUgyALV0hJGQQ8QCbOjdBPygR_4pnx-iuDNo_J0rHiyjPTLQc97o6aoCbBfxSEY-MxsEuCocx0AU4PwR7R9qmv9ihyPmtAFf7aiBd7pCFiErVW0kjoAMvJasxaGefFDtYWcpGGn3hSyCxDrkH0edtQ4PO2eFqczY8y5IRUB-HHgzHSimtAfCpRc-Mub4xLgMt"/>
+</div>
+<p class="font-headline font-bold text-sm leading-tight">Julian Frost</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">Logistics</p>
+</div>
+<div class="group bg-surface-container-lowest p-4 relative overflow-hidden transition-all hover:-translate-y-1">
+<div class="aspect-square mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="professional portrait of a confident woman with short hair wearing a sleek training top in soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWiHMyqYUL2g0QB1eJeY7etxtMXUzTmheNHnt1wr5awdZs2mlfn6x9Bc7slqPEPbXxE0nQJQqhB512H5W-2W0CcjznqYJlqU5RaSjOgYng8wAufvb0nKM-d476ePYtVTVwm0SMN8h_sMPJwsnqxZJak5HR2Sw7WCAsRSVJQYmMd2JyiW7xyS3CKKUvhwhFp_gxi6mEPlchZeFClhBT_kw8kT9mBuuOdgyG1ThAjQz4geKAy9dT3cFIrFpkG0fNk11zRPgvGHpmg9eu"/>
+</div>
+<p class="font-headline font-bold text-sm leading-tight">Artemis K.</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary mt-1">Communications</p>
+</div>
+<!-- Placeholder for more members -->
+<div class="col-span-full py-8 text-center bg-surface-container-low border border-dashed border-outline-variant mt-4">
+<button class="text-xs font-bold font-headline uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center gap-2 mx-auto">
+                        View All 25 Squad Members <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="w-full py-12 px-6 mt-20 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-['Manrope'] text-sm text-slate-500">© 2024 Templar Trail Club. Precision Heritage.</p>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Shipping</a>
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all" href="#">Contact</a>
+</div>
+</footer>
+</main>
+</body></html>

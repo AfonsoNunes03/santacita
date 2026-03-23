@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeria | TRILHOS TEMPLÁRIOS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#5c403d",
+              "on-surface": "#191c1d",
+              "on-background": "#191c1d",
+              "on-primary-fixed-variant": "#930011",
+              "on-tertiary-container": "#c6dfff",
+              "on-primary-fixed": "#410003",
+              "surface-dim": "#d9dadb",
+              "secondary-fixed": "#b1f0ce",
+              "surface-container-lowest": "#ffffff",
+              "surface-tint": "#bd0d1d",
+              "on-secondary-container": "#316e52",
+              "secondary-container": "#aeeecb",
+              "on-tertiary-fixed-variant": "#00497c",
+              "error": "#ba1a1a",
+              "surface-bright": "#f8f9fa",
+              "tertiary-fixed": "#d1e4ff",
+              "surface-container-high": "#e7e8e9",
+              "tertiary": "#004c7f",
+              "surface-container": "#edeeef",
+              "surface": "#f8f9fa",
+              "on-primary-container": "#ffd2ce",
+              "on-error-container": "#93000a",
+              "outline-variant": "#e5bdb9",
+              "primary-fixed-dim": "#ffb3ad",
+              "on-tertiary": "#ffffff",
+              "primary-container": "#c1121f",
+              "surface-container-highest": "#e1e3e4",
+              "secondary-fixed-dim": "#95d4b3",
+              "on-tertiary-fixed": "#001d35",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#002114",
+              "on-secondary": "#ffffff",
+              "background": "#f8f9fa",
+              "tertiary-fixed-dim": "#9dcaff",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "surface-container-low": "#f3f4f5",
+              "secondary": "#2c694e",
+              "outline": "#906f6c",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f0f1f2",
+              "inverse-primary": "#ffb3ad",
+              "on-secondary-fixed-variant": "#0e5138",
+              "primary": "#970012",
+              "primary-fixed": "#ffdad6",
+              "tertiary-container": "#0064a6",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f8f9fa;
+            color: #191c1d;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-sm border-b border-outline-variant/10">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-black text-primary uppercase tracking-tighter" href="#">TRILHOS TEMPLÁRIOS</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 hover:text-primary transition-colors font-medium" href="#">Eventos</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold" href="#">Galeria</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-medium" href="#">Comunidade</a>
+<a class="text-slate-600 hover:text-primary transition-colors font-medium" href="#">Loja</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full border border-outline-variant/20 cursor-pointer hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="language">language</span>
+<span class="text-sm font-bold uppercase tracking-wider">PT</span>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-on-surface" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 max-w-7xl mx-auto px-6">
+<!-- Hero & Editorial Intro -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="text-secondary font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Arquivo Visual</span>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-[0.9] mb-6">A Jornada em <span class="text-primary italic">Imagens.</span></h1>
+<p class="text-lg text-on-surface-variant/80 font-medium leading-relaxed">
+                        Capturando o espírito, o suor e a herança dos Templários em cada trilho. Uma coleção de momentos épicos através das serras mais místicas de Portugal.
+                    </p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-2">
+<span class="text-3xl font-black text-outline-variant/30">1,240+</span>
+<span class="text-xs uppercase font-bold tracking-widest text-on-surface-variant">Momentos Registados</span>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="mb-12 flex flex-col md:flex-row gap-6 items-center justify-between sticky top-24 z-40 py-4 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10">
+<div class="flex flex-wrap gap-3 items-center">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-bold transition-transform active:scale-95">Todos</button>
+<button class="bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-bold hover:bg-surface-container-high transition-all">UT Templários</button>
+<button class="bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-bold hover:bg-surface-container-high transition-all">Trilhos do Castelo</button>
+<button class="bg-surface-container-lowest border border-outline-variant/30 text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-bold hover:bg-surface-container-high transition-all">Rota das Ermidas</button>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<div class="relative flex-1 md:w-48">
+<select class="w-full appearance-none bg-surface-container-low border-none rounded-lg px-4 py-3 text-sm font-bold focus:ring-2 focus:ring-primary/20">
+<option>Ano: 2024</option>
+<option>Ano: 2023</option>
+<option>Ano: 2022</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+<button class="flex items-center gap-2 bg-surface-container-highest px-4 py-3 rounded-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+<span class="text-sm font-bold">Filtros</span>
+</button>
+</div>
+</section>
+<!-- Bento Grid Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<!-- Large Feature Item -->
+<div class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dramatic wide shot of a trail runner descending a steep rocky mountain ridge during sunrise with orange and blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMAoOKWtdTwFF3HWtYgb-VsuESh5YlXG9LK_-QLPxDCgE8jr3IbZMEpLjg2UV50uCj7LhYG5ErC0O9ML-milK-SSYOwJQMjqDK1ORM2RheOxDgjIJMnEM9Ia14qEx3Q68T8wzBeAGBn0QWrYsAM37eCLiCJcgnxuamM9hDO6GvRf5TpHGsTir9PUE7vD1-raoppSnRk4-7c1zimrb6TLT5BURwABK5jRasAQ9869e2SYjmlc0gRAAkq6m9wTuYUX9reOd5Dlu0NVow"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="text-primary-fixed font-bold uppercase tracking-widest text-xs mb-2">Destaque do Mês</span>
+<h3 class="text-white text-3xl font-bold tracking-tight">O Desafio do Castelo</h3>
+<p class="text-white/70 text-sm mt-2 max-w-md">Uma descida técnica que separa os determinados dos lendários.</p>
+</div>
+<div class="absolute top-6 right-6 flex gap-2">
+<span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-black uppercase px-2 py-1 rounded">4K HDR</span>
+</div>
+</div>
+<!-- Standard Items -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="extreme close up of a trail running shoe hitting soft mud with water droplets flying in mid-air and warm natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSFQxadsiLHWmpIRYQYFV-NavC2ZB3OIvqkZHNTe98qcJl8z4tK2019f_OHb1-LtG2mkUEpbhk89N1IEnbkBzGA4IYpCXOI5gqyZ4L2wdLXr2GkHBFlKNAfrJkMeskATxefNihqyiwOqrnVeYkZ6kDrNigVd88mBOJn9a_rmceJwmjvdzfKvmo286Zb67Gs82wHOXzm1iqy20NDfc52AI3xbcusqqOkm1gNysbh060PWK7rfJccZIYwV5rNBQ32HPP19u1cmOrx0xU"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="athlete runner in silhouette against a golden sunset forest background with mist and light rays between trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9xqm-ivGE7oicUUFL6uwHSwqJ8p8mSJh7wuKLTUjllvSknP4E80k3U9XMAXo79X-1LdX-OJn2tKHbYm3OaTnXrJzdBKEWGSI0zcJsD8SvtXu8woNJLUq3dBktUYr-a0LpmYXDgd30ngpXMkH8aVDe5M50zSMI7P7uvM5Pi59Ar-JLS5M0wADf5JjbrF-c70C3YIlum7ObpC_Umr4pAudhTf7Yzmz-fbkI11QFzHgSj9jXyl2IWYn_YtCP5ML3Ox5LN19Miet6-Q-u"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+<!-- Vertical Item -->
+<div class="md:col-span-4 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="low angle vertical shot of trail runners climbing a narrow path through tall pine forest with sunlight filtering through" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBK0vjnOIyP4QgMKQrepVidyQHy5vELJfmQdgwp4E3E42BzLBR-6Ts4tYdCYbhZh6Ho5mVdIswu99TbJE9BU5lAD5268imIOJaAIgOTMe1tgwYjDR2CD8LYdl5p64V1h_r9F94XdRt5g5YPn5uoXTdvTp5s5vqR6O0rYYCwNOnBcBWdWrd48kjK0aOdQ8Qhezdd2CTVPXbmu1KsvY4H2jBXRHzMpPz1qrYq0I-IiQsHesBErT37xAqBijZ6BzxdAn3YwjZRmv7_n0e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<h3 class="text-white font-bold">Resistência Silenciosa</h3>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="group of runners starting a race at dawn in a historical portuguese village with stone houses and cobble streets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVbtLsAYSbq6FSTH6Pfr5KdXJHQJgAntoAknhYB6LI4ONmb9q1O3fMKEwuhsOGsLNTFzMJt-sIVKskY6U1QH1g_gWRShncnXfCzJ18YFPaj7UTHHNDaOi-UWwECSihfCYuKrsSPGiOJZlpU5HGhMRXdHqVTQaBTi9t-QgeuquzF69ZiFar7CgQiOBzGA6K_KlELrV39BEmjvis_sau6mz94ewnox46oLJlHR5DZI52yQJ8b-qqnJuBz-UUUmGZMg5XUEMx557PEobf"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="macro shot of a silver finisher medal with templar cross design resting on a piece of weathered granite rock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAosCdgxikEuZO5Z5b_AkyIH3DgDJxE_7MnVOodwxKtT8sMLycIh9h2hNPR2jigl63fjvGjUKkTypGcmeWkXYfB8cDlas_iHTsXk12yDK_PUJ7HuORjaAP-R3q3I4SHy0U32MkSfeWq5Kt-KGaRFBgTYbWcCnUYjNFh_Zm4xWdznwIHK9kgnH6HObxWjBtCKXJDxsKrhxVJKW29-gp3Cqs3fzs8393-60CNvkkCjn3XWDToDlIyOOxsbWdwqwulF3QBVa7gHvqS-oVx"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+<!-- Wide Item -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="wide panoramic shot of a foggy valley with trail runners appearing as small dots moving along a high ridge line" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5oH5LlthTBnR3VFPG2YIkgYK8uRoLNLOE29BvfSBPQxgUg2cYDKbP7DzKe1bVBowfWBuL3j-zOPYV5l5I32uqMTF8HyUYN1kJpTy-x6XLY8wnvM2K10wU1vwoE6IrOjMvAMHQDKsipf9hGQosJPSkzoNt9Zqjlzirvwx_WLyAMI5_DTmMAkYOnb5l5qppoJ-GiW_ufd7vzjq4KC5LYrsXfJoYRcnYU4d0MdxV_u6Y681NjoxFYM-QR99nr-erEFhfdH4qw2HbH7l"/>
+<div class="absolute bottom-6 left-6 right-6 flex items-center justify-between pointer-events-none">
+<span class="bg-surface/80 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold tracking-widest text-on-surface uppercase">Vista Panorâmica</span>
+<div class="flex gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<section class="mt-20 flex flex-col items-center gap-6">
+<button class="bg-surface-container-highest border-2 border-primary/10 px-10 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-primary hover:text-on-primary transition-all duration-300 group">
+                Ver Mais Momentos
+                <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform" data-icon="keyboard_double_arrow_down">keyboard_double_arrow_down</span>
+</button>
+<p class="text-on-surface-variant/60 text-sm font-medium">A mostrar 8 de 1,240 imagens</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 w-full py-16 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-12">
+<div>
+<h2 class="font-headline font-black text-2xl text-slate-900 mb-2">TRILHOS DOS TEMPLÁRIOS</h2>
+<p class="text-on-surface-variant font-medium max-w-xs">Honrando a história, desafiando os limites. O trail running como nunca o viste.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<div class="flex flex-col gap-3">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Plataforma</span>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">Eventos</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">Resultados</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">Inscrições</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Media</span>
+<a class="text-primary font-bold text-sm" href="#">Galeria</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">Notícias</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">Press Kit</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Apoio</span>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">Contacto</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">FAQs</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-bold" href="#">Voluntariado</a>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-200 w-full mb-8"></div>
+<div class="flex flex-col md:flex-row justify-between items-center w-full gap-6">
+<span class="font-body text-sm tracking-wide text-slate-500">© 2024 Trilhos dos Templários. BY HARTEG</span>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-primary text-sm font-medium" href="#">Terms of Service</a>
+</div>
+<div class="flex gap-4">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="photo_camera">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB for direct uploads or sharing (Contextual) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group">
+<span class="material-symbols-outlined text-3xl" data-icon="cloud_upload">cloud_upload</span>
+<span class="absolute right-full mr-4 bg-on-surface text-surface px-3 py-1 rounded text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none uppercase tracking-widest">Enviar Fotos</span>
+</button>
+</body></html>

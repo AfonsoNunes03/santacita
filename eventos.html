@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eventos | The Digital Pathfinder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#edeeef",
+              "primary-fixed-dim": "#ffb3ad",
+              "secondary-fixed-dim": "#95d4b3",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed": "#001d35",
+              "surface-container-high": "#e7e8e9",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#5c403d",
+              "secondary": "#2c694e",
+              "inverse-on-surface": "#f0f1f2",
+              "tertiary-container": "#0064a6",
+              "inverse-surface": "#2e3132",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#316e52",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f8f9fa",
+              "on-surface": "#191c1d",
+              "primary": "#970012",
+              "surface-bright": "#f8f9fa",
+              "surface-variant": "#e1e3e4",
+              "error": "#ba1a1a",
+              "outline-variant": "#e5bdb9",
+              "tertiary-fixed": "#d1e4ff",
+              "on-primary-fixed": "#410003",
+              "on-error-container": "#93000a",
+              "on-background": "#191c1d",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary-fixed-variant": "#0e5138",
+              "on-tertiary-fixed-variant": "#00497c",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#9dcaff",
+              "surface-tint": "#bd0d1d",
+              "secondary-container": "#aeeecb",
+              "secondary-fixed": "#b1f0ce",
+              "inverse-primary": "#ffb3ad",
+              "background": "#f8f9fa",
+              "tertiary": "#004c7f",
+              "outline": "#906f6c",
+              "primary-container": "#c1121f",
+              "on-secondary": "#ffffff",
+              "on-tertiary-container": "#c6dfff",
+              "on-primary-fixed-variant": "#930011",
+              "surface-dim": "#d9dadb",
+              "on-secondary-fixed": "#002114",
+              "on-primary-container": "#ffd2ce",
+              "primary-fixed": "#ffdad6",
+              "on-tertiary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f8f9fa;
+            color: #191c1d;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-sm shadow-slate-200/50 transition-all">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-black text-slate-900 tracking-tighter font-headline">
+                The Digital Pathfinder
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-red-700 transition-colors font-body text-sm font-medium" href="#">Galeria</a>
+<a class="text-red-700 border-b-2 border-red-700 pb-1 font-body text-sm font-bold" href="#">Eventos</a>
+<a class="text-slate-600 hover:text-red-700 transition-colors font-body text-sm font-medium" href="#">Sobre</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-slate-600">language</span>
+</button>
+<button class="p-2 hover:bg-slate-50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-slate-600">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<header class="px-6 max-w-7xl mx-auto mb-16 md:mb-24">
+<div class="flex flex-col gap-4">
+<span class="text-secondary font-headline uppercase tracking-widest text-xs font-bold">Exploração &amp; Performance</span>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[0.9] max-w-3xl">CALENDÁRIO DE AVENTURA.</h1>
+<p class="text-slate-500 max-w-xl text-lg font-body leading-relaxed mt-4">
+                    Onde o asfalto termina, a precisão começa. Explore os próximos desafios técnicos selecionados para elevar seu potencial.
+                </p>
+</div>
+</header>
+<!-- Upcoming Events: Bento Grid Concept -->
+<section class="px-6 max-w-7xl mx-auto">
+<div class="flex items-baseline justify-between mb-8">
+<h2 class="text-3xl font-bold tracking-tight">Próximos Desafios</h2>
+<div class="h-px flex-grow mx-8 bg-surface-container-highest opacity-50 hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Event Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="aspect-[16/9] md:aspect-auto md:h-[500px] w-full relative">
+<img alt="Trail runner peak" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atleta de trail running em uma crista de montanha ao pôr do sol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpoE0WdDbQZ9a9HGemXYx7Kftg1Z8AB6Qr9mTN9Gqz4wh451BentKaQ3ND7Lj0MytQvStLDUGIwyRBTMIkhcoqWL7YQliyJNesSUMzUFR1JqZi4DSMuW64qGY9z_Z-ga4tXRucNNy0b-etLSBC033utaxwcnDtOd0tNJ-c2dKhZKK62DsDtQfamyU-1MekpE2gJMmJApIjVyJ0iRgs3N2Y6fxSy0L4rF6bNTtjCjzgQmCM0XTI5LrlGLCT_d-vlHb9xmHX4IDX60bR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="text-white">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary text-[10px] font-bold uppercase tracking-wider">Destaque</span>
+<span class="text-sm font-medium text-slate-300">22 de Outubro, 2024</span>
+</div>
+<h3 class="text-4xl font-bold tracking-tight mb-2">Pico das Agulhas Skyrun</h3>
+<div class="flex items-center gap-4 text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-sm">Itatiaia, RJ</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">terrain</span>
+<span class="text-sm">Technical / Grade 4</span>
+</div>
+</div>
+</div>
+<button class="h-14 px-8 bg-primary text-on-primary font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-95 shrink-0 shadow-xl shadow-primary/20">
+                                Inscrever-se <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Event Card -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between group">
+<div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mb-4 block">Ultra Performance</span>
+<h3 class="text-2xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">Costa Verde 50k</h3>
+<p class="text-slate-500 text-sm mb-6">Uma travessia épica entre o mar e a mata atlântica preservada.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-semibold">12km</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-semibold">25km</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-semibold">50km</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-sm font-bold">05 Nov</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">east</span>
+</div>
+</div>
+<div class="flex-1 bg-secondary text-white rounded-xl p-6 shadow-sm flex flex-col justify-between group">
+<div>
+<span class="text-xs font-bold text-secondary-container uppercase tracking-widest mb-4 block">Night Trail</span>
+<h3 class="text-2xl font-bold leading-tight mb-2">Moonlight Summit</h3>
+<p class="text-white/70 text-sm mb-6">Navegação noturna técnica sob o brilho da lua cheia.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-sm font-bold">15 Dez</span>
+<div class="bg-white/10 p-2 rounded-lg">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- More Upcoming Events List -->
+<div class="mt-12 space-y-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-white rounded-lg flex flex-col items-center justify-center text-center shadow-sm">
+<span class="text-[10px] uppercase font-bold text-slate-400 leading-none mb-1">Jan</span>
+<span class="text-xl font-bold text-slate-900 leading-none">12</span>
+</div>
+<div>
+<h4 class="text-xl font-bold">Desafio das Falésias</h4>
+<p class="text-slate-500 text-sm flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Canoa Quebrada, CE</p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="hidden lg:flex flex-col text-right">
+<span class="text-[10px] uppercase font-bold text-slate-400">Distâncias</span>
+<span class="font-bold">5km, 10km, 21km</span>
+</div>
+<button class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all text-sm">
+                            Ver detalhes
+                        </button>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-white rounded-lg flex flex-col items-center justify-center text-center shadow-sm">
+<span class="text-[10px] uppercase font-bold text-slate-400 leading-none mb-1">Fev</span>
+<span class="text-xl font-bold text-slate-900 leading-none">28</span>
+</div>
+<div>
+<h4 class="text-xl font-bold">Serra da Mantiqueira Ultra</h4>
+<p class="text-slate-500 text-sm flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Campos do Jordão, SP</p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="hidden lg:flex flex-col text-right">
+<span class="text-[10px] uppercase font-bold text-slate-400">Distâncias</span>
+<span class="font-bold">80km Solo/Revezamento</span>
+</div>
+<button class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all text-sm">
+                            Ver detalhes
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Events Section -->
+<section class="mt-24 px-6 max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="text-3xl font-bold tracking-tight mb-2">Histórico de Conquistas</h2>
+<p class="text-slate-500 font-body">Reviva os momentos e confira os resultados das edições anteriores.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Past Event item -->
+<div class="group">
+<div class="relative aspect-video rounded-lg overflow-hidden mb-4 grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Landscape mountain" class="w-full h-full object-cover" data-alt="Montanhas cobertas por neblina com corredores ao fundo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN8J3Q9-snqfrseCqT-vBaJEEAktpQvLmsamMuAqUxtyCqd7NnTFNn34VR77ejqBpAIP3os-hZDcIPXAyzRHSS4qhuE1v2JYVHTqjJAleoSfKDK4U8tv98qYg-3xQE5WBNtf9BXUgLAyZJE1Zr9IXlz7TdizshR2Dwd3vwy1Cgk9tNA6mMaf_im4FFEQbASUdHIq_vRolbyJMYM0GBopARUauORe5wOsFAT_wN8sQEO0wpGUtXpIvinabWiDY3H39JPlOK3Kr9Leqg"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-black uppercase">Finalizado</div>
+</div>
+<h4 class="text-lg font-bold">Transmantiqueira 2023</h4>
+<p class="text-slate-500 text-sm mb-3">Julho 2023 • 120km de imersão total</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:underline underline-offset-4 decoration-2" href="#">
+                        Ver Resultados &amp; Galeria <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Past Event item -->
+<div class="group">
+<div class="relative aspect-video rounded-lg overflow-hidden mb-4 grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Coastal run" class="w-full h-full object-cover" data-alt="Corrida na areia da praia ao amanhecer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARfuTni8S2EnFYyfiE169cWYoN2XK-kQwln4nnQfBNJOX3uMu0JatB2cH6QYlZcl3SVZ7IDDbDpHv1XGdsFHt_6lVuvSfJpK678tCPkJa_70YKNPoTcrFOKTB1P5vNYOyPe3KXrJWNsmdB7QRSqsrKnFpXv8iyozCfnUbRs_b5UIOqHa6Wg1RPjnVVzunZRaQSSjhqjWo4vHZCrXR07jv8MAzVMMUS99YTTnMsPIBv5SC915VHyHSDOCraSjzRVKL6-pylTXy3C9uc"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-black uppercase">Finalizado</div>
+</div>
+<h4 class="text-lg font-bold">Beach Path Series - Floripa</h4>
+<p class="text-slate-500 text-sm mb-3">Maio 2023 • Etapa Areia &amp; Rocha</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:underline underline-offset-4 decoration-2" href="#">
+                        Ver Resultados &amp; Galeria <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Past Event item -->
+<div class="group">
+<div class="relative aspect-video rounded-lg overflow-hidden mb-4 grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Forest trail" class="w-full h-full object-cover" data-alt="Trilha densa em floresta temperada com luz filtrada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG6ZXjqkkPov--1zhYATrZOR0slH5hvJxa142d3Ej1FUfS0GUAe40Yvhyb8AdJyIcFJgQuAqU6p8nXBLvIc7QTO92o-jBJ8c1yW5SSaO_pXi3fCtniSCOyOguDl4jSnCIn5_Yv39oGxpHkfvAZMwr4DpbArSAQh4C35YTIi51LeExsop-IMVQ1XhhpUI7YTy3bbUQt0BoS6jkCvDvP8vkD_fT6OyHLLlhtoRDzTdWQSsc57govce85CzE2-q0ZO9PX7LWgcgbVxgDq"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-black uppercase">Finalizado</div>
+</div>
+<h4 class="text-lg font-bold">Vertical Mile Challenge</h4>
+<p class="text-slate-500 text-sm mb-3">Março 2023 • +1600m D+ Acumulado</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:underline underline-offset-4 decoration-2" href="#">
+                        Ver Resultados &amp; Galeria <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="px-12 py-4 bg-surface-container-highest text-slate-900 font-bold rounded-lg hover:bg-slate-200 transition-all active:scale-95">
+                    Carregar mais eventos anteriores
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-20 bg-slate-50">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-lg font-bold text-slate-900 font-headline">The Digital Pathfinder</span>
+<p class="font-body text-sm text-slate-500">© 2024 The Digital Pathfinder. Website desenvolvido por BY HARTEG</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all text-sm" href="#">Instagram</a>
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all text-sm" href="#">Facebook</a>
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all text-sm" href="#">Privacidade</a>
+<a class="text-slate-500 hover:text-red-700 hover:underline decoration-red-700 underline-offset-4 transition-all text-sm" href="#">Termos</a>
+</div>
+</div>
+</footer>
+<!-- Contextual FAB - Suppressed as per "Details" style screen rules, but kept for main Events list flow as a 'Quick Register' -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all md:hidden">
+<span class="material-symbols-outlined">event_available</span>
+</button>
+</body></html>

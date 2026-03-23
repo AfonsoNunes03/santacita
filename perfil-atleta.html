@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-PT"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#edeeef",
+              "tertiary-container": "#0064a6",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#5c403d",
+              "on-surface": "#191c1d",
+              "inverse-on-surface": "#f0f1f2",
+              "secondary-fixed": "#b1f0ce",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary": "#004c7f",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed-variant": "#00497c",
+              "on-background": "#191c1d",
+              "on-tertiary-container": "#c6dfff",
+              "primary": "#970012",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#0e5138",
+              "primary-fixed-dim": "#ffb3ad",
+              "on-primary-fixed-variant": "#930011",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#95d4b3",
+              "on-primary-container": "#ffd2ce",
+              "tertiary-fixed": "#d1e4ff",
+              "surface": "#f8f9fa",
+              "surface-tint": "#bd0d1d",
+              "on-secondary-fixed": "#002114",
+              "background": "#f8f9fa",
+              "inverse-surface": "#2e3132",
+              "outline": "#906f6c",
+              "tertiary-fixed-dim": "#9dcaff",
+              "outline-variant": "#e5bdb9",
+              "surface-dim": "#d9dadb",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#316e52",
+              "surface-container-low": "#f3f4f5",
+              "inverse-primary": "#ffb3ad",
+              "secondary": "#2c694e",
+              "primary-fixed": "#ffdad6",
+              "surface-bright": "#f8f9fa",
+              "primary-container": "#c1121f",
+              "on-primary-fixed": "#410003",
+              "surface-container-high": "#e7e8e9",
+              "on-tertiary-fixed": "#001d35",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e1e3e4",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#aeeecb",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Manrope', sans-serif; }
+      .font-headline { font-family: 'Space Grotesk', sans-serif; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .glass-effect { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/60 dark:bg-zinc-950/60 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-black tracking-tighter text-red-700 dark:text-red-500 font-headline">PATHFINDER</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="#">Home</a>
+<a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="#">Eventos</a>
+<a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="#">Galeria</a>
+<a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="#">Sobre</a>
+<a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="#">Loja</a>
+<a class="font-headline tracking-tight text-sm font-bold uppercase text-zinc-600 dark:text-zinc-400 hover:text-red-700 dark:hover:text-red-400 transition-colors" href="#">Comunidade</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-600 cursor-pointer p-2 hover:bg-zinc-100/50 rounded-lg" data-icon="language">language</span>
+<span class="material-symbols-outlined text-red-700 cursor-pointer p-2 hover:bg-zinc-100/50 rounded-lg" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+</nav>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden lg:flex h-screen w-72 fixed left-0 top-0 pt-24 bg-zinc-50 dark:bg-zinc-900 flex-col gap-2 z-40">
+<div class="px-8 mb-8">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Foto do perfil do atleta" class="w-full h-full object-cover" data-alt="close-up portrait of a determined trail runner with light sweat and focused expression, natural outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_WrqFUdKLygtuTenseBXKuh0eXqgQF3-MwuMTUZ_X-h3W1QqdXqkwWtjE3lFiyM45IJXr43WsbdWlE2OjNY8kRFBEICL8VYxd-7gZVF7gIHiLIpWgkrLtql6qSGyEvjQl0fDGIa2MI15y6aBF32tmCV0__3Xbjx5UODxwYh43wCZCkPNhZj1b58_xJ9sMbowlgjtXGeUoUgFmXJuQIVOw05qpZYJGuxYWTpJu9K6XWb9U5rtRHJGgXpM-3iWd7HGqfzUX-7NIHMN3"/>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Atleta Pro</h3>
+<p class="text-xs text-zinc-500 uppercase tracking-wider">Nível: Ultra Trail</p>
+</div>
+</div>
+<button class="w-full py-2 bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest rounded-lg hover:opacity-90 transition-all">Upgrade Plan</button>
+</div>
+<nav class="flex flex-col">
+<a class="flex items-center gap-4 bg-white dark:bg-zinc-800 text-red-700 dark:text-red-400 font-bold rounded-l-full ml-4 shadow-sm px-8 py-4 translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 px-8 py-4 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="directions_run">directions_run</span>
+<span class="font-body text-sm">Meus Treinos</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 px-8 py-4 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-body text-sm">Inscrições</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 px-8 py-4 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-body text-sm">Estatísticas</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 px-8 py-4 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body text-sm">Configurações</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 pt-28 pb-20 px-4 md:px-8 max-w-7xl mx-auto min-h-screen">
+<!-- Header Section -->
+<header class="mb-12">
+<label class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-2 block">Painel do Atleta</label>
+<h1 class="font-headline text-4xl md:text-6xl font-black tracking-tight text-on-surface">OLÁ, CAMPEÃO.</h1>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Countdown Card: The "Next Race" -->
+<section class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden group shadow-sm">
+<div class="absolute inset-0 z-0 opacity-10 group-hover:scale-105 transition-transform duration-700">
+<img alt="Mountain Race" class="w-full h-full object-cover" data-alt="dramatic wide angle shot of a rocky mountain trail under a moody sunset sky, epic landscape photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJwEUGculrHQ6Kw17GxXYez9DLV97THSLv1R3wD0lPZsbQNxnILxPZgDMl5mP2u-faCrZWn6jMKs_AcE1I4Py02y4b_jIF_48ExvuhAH3-vwgVES3woQOU1p4ORon4mvNt20JH6WirczwpsXDiZgzLFEJNAXyPOuwvI5BzpB8yExe0ucdsHY2ZRw2c88250_o-DtezRf5WpbMbbKJTHMkmwadUWjC5nfURRwFk5mqFcMZva9YsSO3_NyDcWovpl7rBBEB4lmsASBzN"/>
+</div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Próximo Desafio</span>
+<h2 class="font-headline text-3xl font-bold mb-1">Trilhos dos Templários</h2>
+<p class="text-zinc-500 font-medium">Tomar, Portugal • 42km Trail Marathon</p>
+</div>
+<div class="mt-8 flex gap-4 md:gap-8">
+<div class="flex flex-col">
+<span class="font-headline text-4xl md:text-6xl font-black text-primary">12</span>
+<span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Dias</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-4xl md:text-6xl font-black text-primary">08</span>
+<span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Horas</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-4xl md:text-6xl font-black text-primary">45</span>
+<span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Mins</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Stats Card -->
+<section class="md:col-span-4 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-lg font-bold mb-6">Performance Semanal</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs text-zinc-500 uppercase font-bold">Distância</span>
+<span class="font-headline text-2xl font-bold">48.2 <span class="text-sm font-normal text-zinc-400">km</span></span>
+</div>
+<div class="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs text-zinc-500 uppercase font-bold">Elevação</span>
+<span class="font-headline text-2xl font-bold">2.450 <span class="text-sm font-normal text-zinc-400">m</span></span>
+</div>
+<div class="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full py-4 border-2 border-zinc-200 rounded-lg text-xs font-bold uppercase tracking-widest hover:border-red-700 hover:text-red-700 transition-all">Ver Estatísticas</button>
+</section>
+<!-- Activity Feed -->
+<section class="md:col-span-7 bg-surface-container-low rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline text-xl font-bold">Atividade Recente</h3>
+<a class="text-[10px] font-bold uppercase text-red-700 tracking-widest" href="#">Ver Todas</a>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4 p-4 bg-white rounded-lg group hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="terrain">terrain</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-sm">Treino de Montanha - Serra da Estrela</h4>
+<span class="text-[10px] text-zinc-400 font-bold">Ontem</span>
+</div>
+<p class="text-xs text-zinc-500 mt-1">15.4km • 1h 45min • 800m D+</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-white rounded-lg group hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-sm">Encomenda #7721 Enviada</h4>
+<span class="text-[10px] text-zinc-400 font-bold">2 dias atrás</span>
+</div>
+<p class="text-xs text-zinc-500 mt-1">Pathfinder Pro Vest v2 - Black Edition</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-white rounded-lg group hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="confirmation_number">confirmation_number</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-sm">Inscrição Confirmada</h4>
+<span class="text-[10px] text-zinc-400 font-bold">5 dias atrás</span>
+</div>
+<p class="text-xs text-zinc-500 mt-1">Trilhos dos Templários - 42K</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Store / Orders Teaser -->
+<section class="md:col-span-5 grid grid-rows-2 gap-6">
+<div class="bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-20 pointer-events-none">
+<img alt="Running Shoe" class="w-full h-full object-cover" data-alt="close-up of a high-tech trail running shoe with mud splashes, artistic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQUSUa-S8nXJi57xQglLtUAkQ2f3a_CVwGfOGNrUjZ2g1DlCJA3AwcD6-iyyiAShD6KM1hP9M20QrvE2oNXaqbZt19SxYKAsa0KqqU2Q8Kd_KY5tvfHvHMrzjdr-ahbWAEffebWRpmtSF7yOctihUM-cfwBrp1SKP6zB06LudTYU0H1OiRR_GSGiWEk1CDLKiH3xxzuViXmj2qZmc0iVQ6_QaMyaKEokLdc_Hgrb7IscAf0SlkkjWKJAgScSwZ1-qWyA-7XyIVa_iW"/>
+</div>
+<div class="relative z-10">
+<label class="text-red-700 font-bold text-[10px] uppercase tracking-widest mb-1 block">Loja Exclusiva</label>
+<h3 class="font-headline text-lg font-bold">Equipamento Pro</h3>
+<p class="text-xs text-zinc-500 mt-2 max-w-[200px]">Desconto de 15% ativo para membros Pathfinder.</p>
+</div>
+<button class="relative z-10 w-fit px-6 py-2 bg-on-surface text-white text-[10px] font-bold uppercase tracking-widest rounded-lg">Comprar Agora</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<h3 class="font-headline text-lg font-bold mb-4">Últimas Compras</h3>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-zinc-100 rounded-lg border border-zinc-200 p-2">
+<img alt="Apparel" class="w-full h-full object-contain" data-alt="neatly folded technical trail running t-shirt in deep red, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh4zY6vCZ_bNmI2JfUBeEsjOhAaXMFAm60UbWzFiu-7yxYylBPb2O63Qv5w-PZLd78_DPZiZPZPFffkgA2yaviEfAIh4aTzWZ0RBXvG_tJdAe4rO3m5-gEPCFufdOW_OWwKdr0g68I_yemWSf0PK0d3e__3nGKNfWykwB6c0LB5zaJU5MOwIch6yl9vSG6VXZ-osyqSlu03IN0luowINx9Yw3zxOyYheQTCEZRZFWx_EFNeu249ZQ87Dkxb-HD6xJQjk1ws_Tbz1JX"/>
+</div>
+<div>
+<p class="text-sm font-bold">Pathfinder Tech Tee</p>
+<p class="text-xs text-zinc-400">Em trânsito • ETA: Amanhã</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Section: Settings/Profile Edit (Small Form Teaser) -->
+<section class="mt-12 bg-surface-container-low rounded-xl p-8">
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/3">
+<h3 class="font-headline text-2xl font-bold mb-2">Dados do Perfil</h3>
+<p class="text-sm text-zinc-500">Mantenha os seus dados atualizados para o seguro de prova e classificações oficiais.</p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Nome Completo</label>
+<input class="bg-white border-none rounded-lg p-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all" type="text" value="João Pathfinder"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Email de Atleta</label>
+<input class="bg-white border-none rounded-lg p-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all" type="email" value="joao.pro@trailclub.pt"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Equipa / Clube</label>
+<input class="bg-white border-none rounded-lg p-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all" type="text" value="Digital Pathfinder Trail Club"/>
+</div>
+<div class="flex items-end">
+<button class="w-full py-4 bg-primary text-white text-xs font-bold uppercase tracking-[0.2em] rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all">Atualizar Dados</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 mt-20">
+<div class="py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-red-700 font-bold font-headline tracking-tighter text-xl">PATHFINDER</span>
+<p class="font-['Manrope'] text-xs uppercase tracking-widest text-zinc-400 mt-2">© 2024 Digital Pathfinder Trail Club.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-zinc-400 hover:text-red-600 transition-colors" href="#">Privacidade</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-zinc-400 hover:text-red-600 transition-colors" href="#">Termos</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-zinc-400 hover:text-red-600 transition-colors" href="#">Contato</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation (Hidden on desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-xl border-t border-zinc-100 flex justify-around items-center h-20 px-4 z-50">
+<a class="flex flex-col items-center gap-1 text-red-700" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-400" href="#">
+<span class="material-symbols-outlined" data-icon="directions_run">directions_run</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Treinos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-400" href="#">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Eventos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-400" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Perfil</span>
+</a>
+</nav>
+</body></html>
